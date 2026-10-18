@@ -128,11 +128,53 @@ The implemented validator accepts:
 though they describe classification/availability more than evidence quality.
 The validator does not accept `pending` or `rejected`.
 
+## Configured public-source acquisition
+
+The repository includes `data/source_catalog.json` and
+`pipeline/fetch_sources.py` for collecting permitted public responses from:
+
+- PSX
+- Sarmaya
+- PSX Terminal
+- Ticker Analysts
+- SCS Trade
+- FinHisaab
+
+Use explicit URLs when possible:
+
+```bash
+python pipeline/fetch_sources.py --company FFC \
+  --url "https://example.com/public/ffc-report.pdf"
+```
+
+For a bounded landing-page discovery pass:
+
+```bash
+python pipeline/fetch_sources.py --company FFC --discover --delay 2
+```
+
+The collector:
+
+- uses a descriptive user agent and a small request rate;
+- limits individual responses to 25 MiB;
+- preserves every response under `data/raw/<COMPANY>/external/<PROVIDER>/`;
+- registers the response in `data/source_registry.json`;
+- records provider, HTTP status, content type, retrieval method, URL, and hash;
+- continues when one configured provider fails.
+
+Discovery is deliberately shallow: it fetches configured landing pages and
+keeps links containing the requested company identifier. It is not a promise
+that a provider exposes company data on its homepage. Provider-specific
+endpoints, APIs, login flows, and terms must be configured only after they are
+confirmed to be public and permitted. Raw responses are not normalized facts;
+they require extraction, source review, and conflict handling.
+
 ## Access, licensing, and responsible use
 
 - Prefer official downloads and permitted APIs.
 - Respect website terms, copyright, rate limits, and data licences.
-- Do not bypass authentication or access controls.
+- Do not bypass authentication, robots restrictions, paywalls, CAPTCHAs, or
+  other access controls.
 - Do not fabricate URLs, dates, page numbers, values, or management claims.
 - Preserve source limitations rather than hiding them.
 

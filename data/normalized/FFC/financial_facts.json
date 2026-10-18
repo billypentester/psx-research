@@ -11,7 +11,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 2 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "gross_profit",
@@ -22,7 +23,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 2 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "profit_after_tax",
@@ -33,7 +35,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 2 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "earnings_per_share",
@@ -44,7 +47,8 @@
       "unit": "PKR_per_share",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 2 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_turnover",
@@ -55,7 +59,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 6 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "profit_after_tax",
@@ -66,7 +71,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 6 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "profit_attributable_to_parent",
@@ -77,7 +83,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 6 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "earnings_per_share",
@@ -88,7 +95,8 @@
       "unit": "PKR_per_share",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 6 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "total_assets",
@@ -99,7 +107,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 1 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "total_equity_and_liabilities",
@@ -110,7 +119,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 1 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "total_assets",
@@ -121,7 +131,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 1 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "total_equity_and_liabilities",
@@ -132,7 +143,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 1 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "total_assets",
@@ -143,7 +155,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 5 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "total_equity_and_liabilities",
@@ -154,7 +167,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 5 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "total_assets",
@@ -165,7 +179,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 5 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "total_equity_and_liabilities",
@@ -176,7 +191,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 5 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_turnover",
@@ -187,7 +203,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 2 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "gross_profit",
@@ -198,7 +215,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 2 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "profit_after_tax",
@@ -209,7 +227,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 2 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "earnings_per_share",
@@ -220,7 +239,8 @@
       "unit": "PKR_per_share",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 2 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_turnover",
@@ -231,7 +251,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 6 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "gross_profit",
@@ -242,7 +263,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 6 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "gross_profit",
@@ -253,7 +275,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 6 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "profit_after_tax",
@@ -264,7 +287,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 6 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "profit_attributable_to_parent",
@@ -275,7 +299,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 6 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "earnings_per_share",
@@ -286,7 +311,8 @@
       "unit": "PKR_per_share",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 6 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_generated_from_operations",
@@ -297,7 +323,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_generated_from_operations",
@@ -308,7 +335,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_operating_activities",
@@ -319,7 +347,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_operating_activities",
@@ -330,7 +359,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_investing_activities",
@@ -341,7 +371,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_investing_activities",
@@ -352,7 +383,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_financing_activities",
@@ -363,7 +395,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_financing_activities",
@@ -374,7 +407,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_change_in_cash_and_cash_equivalents",
@@ -385,7 +419,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_change_in_cash_and_cash_equivalents",
@@ -396,7 +431,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_and_cash_equivalents_beginning",
@@ -407,7 +443,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_and_cash_equivalents_beginning",
@@ -418,7 +455,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "effect_of_exchange_rate_changes",
@@ -429,7 +467,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "effect_of_exchange_rate_changes",
@@ -440,7 +479,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_and_cash_equivalents_ending",
@@ -451,7 +491,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_and_cash_equivalents_ending",
@@ -462,7 +503,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_and_cash_equivalents_acquired_through_merger",
@@ -473,7 +515,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 4 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_generated_from_operations",
@@ -484,7 +527,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_generated_from_operations",
@@ -495,7 +539,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_operating_activities",
@@ -506,7 +551,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_operating_activities",
@@ -517,7 +563,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_investing_activities",
@@ -528,7 +575,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_investing_activities",
@@ -539,7 +587,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_financing_activities",
@@ -550,7 +599,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_cash_from_financing_activities",
@@ -561,7 +611,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_change_in_cash_and_cash_equivalents",
@@ -572,7 +623,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "net_change_in_cash_and_cash_equivalents",
@@ -583,7 +635,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_and_cash_equivalents_beginning",
@@ -594,7 +647,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_and_cash_equivalents_beginning",
@@ -605,7 +659,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "effect_of_exchange_rate_changes",
@@ -616,7 +671,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "effect_of_exchange_rate_changes",
@@ -627,7 +683,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_and_cash_equivalents_ending",
@@ -638,7 +695,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_and_cash_equivalents_ending",
@@ -649,7 +707,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     },
     {
       "metric": "cash_and_cash_equivalents_acquired_through_merger",
@@ -660,7 +719,8 @@
       "unit": "PKR_thousand",
       "source_id": "src_e4abb64ff4886ffc",
       "source_page": "Annexure A, page 8 of 8",
-      "verification_status": "verified"
+      "verification_status": "verified",
+      "fact_classification": "reported"
     }
   ]
 }

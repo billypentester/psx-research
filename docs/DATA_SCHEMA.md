@@ -1,8 +1,7 @@
 # Data Schema
 
 This document defines the currently implemented JSON contracts for source
-metadata and financial facts. It describes what the repository actually
-accepts today; proposed extensions are listed separately.
+metadata, reported financial facts, and derived metrics.
 
 ## Design goals
 
@@ -77,6 +76,7 @@ Each fact currently requires:
 | `source_id` | string | Existing registry ID | Provenance link |
 | `source_page` | string | Human-readable location | Page/annexure supporting the value |
 | `verification_status` | string | See below | Evidence/review status |
+| `fact_classification` | string | `reported`, `calculated`, `estimated`, `missing`, or `management_provided` | What kind of value this is |
 
 Example:
 
@@ -90,7 +90,8 @@ Example:
   "unit": "PKR_thousand",
   "source_id": "src_e4abb64ff4886ffc",
   "source_page": "Annexure A, page 2 of 8",
-  "verification_status": "verified"
+  "verification_status": "verified",
+  "fact_classification": "reported"
 }
 ```
 
@@ -134,10 +135,60 @@ The validator accepts:
 
 The validator does not accept `pending` or `rejected`.
 
-This mixed vocabulary exposes a current schema limitation: evidence status
-and fact classification are not separate fields. Do not silently introduce a
-new status. A future migration should add an explicit classification field
-and update validators/tests together.
+Evidence status and fact classification are separate. `verification_status`
+describes review evidence, while `fact_classification` describes whether the
+value was reported, calculated, estimated, missing, or management-provided.
+
+## Derived metrics
+
+`pipeline/derive_metrics.py` reads normalized facts and writes
+`data/derived/<COMPANY>/derived_metrics.json`. Each metric records its formula,
+input fact keys, period, scope, and calculation status. The current FFC
+artifact includes growth, margin, cash-conversion, and asset-turnover metrics.
+Missing prior periods, zero denominators, and unverified inputs produce an
+explicit `missing` result rather than a fabricated value.
+
+## Structured-source normalization
+
+`pipeline/normalize_external.py` converts an explicitly mapped CSV, JSON, or
+HTML table into normalized data. A mapping file is required; the importer
+does not guess that arbitrary provider columns represent financial metrics.
+
+Market data is written to:
+
+```text
+data/normalized/<COMPANY>/market_data.json
+```
+
+Each observation contains:
+
+| Field | Meaning |
+| --- | --- |
+| `company_id` | Ticker/company identifier |
+| `source_id` | Registered source response |
+| `observed_at` | ISO timestamp for the price observation |
+| `price` | Non-negative numeric price |
+| `currency` | Currency when supplied |
+| `volume` | Optional volume |
+| `shares_outstanding` | Optional shares count |
+| `market_cap` | Optional market capitalization |
+| `dividend_per_share` | Optional dividend per share |
+
+Example:
+
+```bash
+python pipeline/normalize_external.py \
+  --company FFC \
+  --input data/raw/FFC/external/psx/prices.csv \
+  --mapping config/ffc_market_mapping.json \
+  --source-id src_example \
+  --kind market \
+  --output data/normalized/FFC/market_data.json
+```
+
+Imported financial facts are deliberately marked `needs_final_review`; an
+importer cannot establish that a provider table has the correct statement
+scope, period, units, signs, or restatement context.
 
 ## Validation rules
 
@@ -146,7 +197,7 @@ and update validators/tests together.
 - readable JSON files;
 - `facts` is an array;
 - registry IDs are present and unique;
-- all required fact fields exist;
+- all required fact fields exist, including `fact_classification`;
 - scope, unit, and verification status are allowed;
 - values are finite numbers and not booleans;
 - dates are ISO dates;

@@ -1,8 +1,8 @@
 # Ingestion and Verification Pipeline
 
-This is the operating procedure for turning a PSX filing into auditable
-financial facts. The current implementation is complete for the FFC fixture,
-but source discovery and downloading remain manual by design.
+This is the operating procedure for turning public source material into
+auditable financial facts and a reproducible analysis report. The pipeline is
+company-agnostic; FFC is the current fixture.
 
 ## Pipeline overview
 
@@ -23,12 +23,25 @@ extract/OCR --> normalize facts --> automated validation
                                       |
                                       v
                               analysis-ready facts
+                                      |
+                                      v
+                         fundamental analysis report
 ```
 
 Automated checks support review. They do not replace reading the source
 document, checking signs and columns, or resolving ambiguities.
 
 ## Stage 1: Discover the source
+
+For a new ticker, initialize the generic workspace first:
+
+```bash
+python pipeline/init_company.py --company ENGRO
+```
+
+This creates empty contracts under `data/normalized/ENGRO/`. Empty contracts
+are safe but contain no evidence; the analysis report will remain low
+confidence until sources are collected, normalized, and verified.
 
 Prefer an official PSX filing or company investor-relations document.
 Capture, where available:
@@ -107,6 +120,21 @@ Follow [DATA_SCHEMA.md](./DATA_SCHEMA.md). Keep standalone and consolidated
 records distinct and never mix quarterly values with cumulative year-to-date
 values. Use a separate record for each period and unit.
 
+For structured CSV, JSON, or HTML responses, use an explicit mapping:
+
+```bash
+python pipeline/normalize_external.py \
+  --company FFC \
+  --input data/raw/FFC/external/psx/prices.csv \
+  --mapping config/ffc_market_mapping.json \
+  --source-id src_example \
+  --kind market \
+  --output data/normalized/FFC/market_data.json
+```
+
+Mappings are provider- and response-specific. Imported financial facts remain
+`needs_final_review` until the original response is checked.
+
 ## Stage 5: Run automated controls
 
 Run the tests and validators:
@@ -149,6 +177,12 @@ beginning + net_change + FX effect + merger cash == ending
 The merger-cash line is treated as zero when absent, matching the script's
 current logic. Missing required facts produce errors. This validator is
 specific to the current annual FFC data model.
+
+If `market_data.json` exists, also run:
+
+```bash
+python pipeline/validate/validate_market_data.py --company FFC
+```
 
 ## Stage 6: Generate OCR-assisted review reports
 
@@ -195,13 +229,87 @@ The current FFC review audit records a visual review of all 32 facts that
 were previously `ocr_unverified`, including the cash-flow pages. The final
 fixture contains 60 `verified` facts.
 
-## Stage 8: Analyze
+## Stage 8: Derive metrics
+
+Run the company-agnostic calculation layer:
+
+```bash
+python pipeline/derive_metrics.py --company FFC
+```
+
+It writes `data/derived/<COMPANY>/derived_metrics.json`. Calculations are
+created only from `verified` inputs. Missing prior periods, zero denominators,
+and unverified inputs are retained as explicit missing results with reasons.
+The output records formulas and normalized input fact keys so Hermes can cite
+the calculation instead of treating it as a reported number.
+
+## Stage 9: Analyze
 
 Only use facts whose source, period, scope, unit, and verification state are
 clear. Label derived ratios and calculations as calculations, identify
 assumptions, and disclose missing or disputed data. See the
 [`psx-equity-analyst` skill](/home/bilal/projects/psx-research/skills/psx-equity-analyst/SKILL.md)
 for the analysis workflow.
+
+## Stage 10: Run the complete pipeline
+
+The one-command workflow is:
+
+```bash
+python pipeline/run_company.py --company ENGRO --validate
+```
+
+This command requires normalized financial facts. Initializing a company does
+not fetch or invent statistics. For an intentional empty readiness report,
+use `--allow-empty`.
+
+It initializes missing company contracts before running the analysis. To
+include bounded public-source collection:
+
+```bash
+python pipeline/run_company.py \
+  --company ENGRO \
+  --fetch-discover \
+  --validate
+```
+
+It produces an additional `reports/<COMPANY>/hermes_context.json` evidence
+package. Hermes should consume that package rather than reading arbitrary
+provider pages directly.
+
+After source collection and normalization, run:
+
+```bash
+python pipeline/run_analysis.py --company FFC --validate
+```
+
+To include a bounded public-source collection pass:
+
+```bash
+python pipeline/run_analysis.py --company FFC --fetch-discover --validate
+```
+
+Or provide explicit permitted URLs:
+
+```bash
+python pipeline/run_analysis.py --company FFC \
+  --url "https://example.com/public/ffc-report.pdf" --validate
+```
+
+This validates normalized facts, runs accounting controls, regenerates
+derived metrics, and writes:
+
+```text
+data/derived/<COMPANY>/derived_metrics.json
+reports/<COMPANY>/fundamental_analysis.json
+reports/<COMPANY>/fundamental_analysis.md
+```
+
+The report uses the latest normalized period, but it does not imply that the
+latest period is the latest period available on the internet. That depends on
+which permitted sources have been collected and normalized. Missing market
+data, dividends, debt, segments, peers, or valuation inputs are reported as
+gaps rather than inferred.
 
 ## Re-running safely
 

@@ -1,0 +1,6 @@
+{
+  "company_id": "OGDC",
+  "currency": "PKR",
+  "source": "data/normalized/OGDC/financial_facts.json",
+  "metrics": []
+}

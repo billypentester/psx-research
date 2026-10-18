@@ -30,17 +30,30 @@ def load_registry() -> list[dict]:
     return records
 
 
-def register_source(args: argparse.Namespace) -> dict:
-    file_path = Path(args.file).expanduser().resolve()
+def register_file(
+    *,
+    company: str,
+    title: str,
+    source_type: str,
+    file: str | Path,
+    url: str | None = None,
+    published_at: str | None = None,
+    notes: str | None = None,
+    provider: str | None = None,
+    retrieval_method: str = "manual",
+    http_status: int | None = None,
+    content_type: str | None = None,
+) -> dict:
+    file_path = Path(file).expanduser().resolve()
 
     if not file_path.is_file():
         raise FileNotFoundError(f"Source file does not exist: {file_path}")
 
-    if args.url and urlparse(args.url).scheme not in {"http", "https"}:
+    if url and urlparse(url).scheme not in {"http", "https"}:
         raise ValueError("URL must start with http:// or https://")
 
-    if args.published_at:
-        datetime.strptime(args.published_at, "%Y-%m-%d")
+    if published_at:
+        datetime.strptime(published_at, "%Y-%m-%d")
 
     file_hash = sha256_file(file_path)
     records = load_registry()
@@ -48,14 +61,14 @@ def register_source(args: argparse.Namespace) -> dict:
     # Identical content is not registered twice for the same company.
     for record in records:
         if (
-            record["company_id"] == args.company
+            record["company_id"] == company
             and record["sha256"] == file_hash
         ):
             print(f"Already registered: {record['source_id']}")
             return record
 
     identity = "|".join(
-        [args.company, args.url or "", file_hash]
+        [company, url or "", file_hash]
     )
     source_id = "src_" + hashlib.sha256(
         identity.encode("utf-8")
@@ -63,18 +76,22 @@ def register_source(args: argparse.Namespace) -> dict:
 
     record = {
         "source_id": source_id,
-        "company_id": args.company,
-        "source_type": args.type,
-        "title": args.title,
-        "url": args.url or None,
-        "published_at": args.published_at or None,
+        "company_id": company,
+        "source_type": source_type,
+        "title": title,
+        "url": url or None,
+        "published_at": published_at or None,
         "retrieved_at": datetime.now(timezone.utc).isoformat(),
         "local_path": str(file_path.relative_to(ROOT))
         if file_path.is_relative_to(ROOT)
         else str(file_path),
         "sha256": file_hash,
         "page_number": None,
-        "notes": args.notes or None,
+        "notes": notes or None,
+        "provider": provider,
+        "retrieval_method": retrieval_method,
+        "http_status": http_status,
+        "content_type": content_type,
     }
 
     REGISTRY.parent.mkdir(parents=True, exist_ok=True)
@@ -90,6 +107,18 @@ def register_source(args: argparse.Namespace) -> dict:
     print(f"Registry: {REGISTRY}")
     print(f"SHA-256: {file_hash}")
     return record
+
+
+def register_source(args: argparse.Namespace) -> dict:
+    return register_file(
+        company=args.company,
+        title=args.title,
+        source_type=args.type,
+        file=args.file,
+        url=args.url,
+        published_at=args.published_at,
+        notes=args.notes,
+    )
 
 
 def main() -> None:

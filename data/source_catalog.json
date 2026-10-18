@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "provider": "PSX",
+      "base_url": "https://dps.psx.com.pk/",
+      "role": "primary",
+      "source_types": ["annual_report", "quarterly_report", "announcement", "market_data"],
+      "notes": "Preferred primary source for PSX filings and exchange data. Use permitted public URLs or APIs."
+    },
+    {
+      "provider": "Sarmaya",
+      "base_url": "https://sarmaaya.pk/",
+      "role": "secondary",
+      "source_types": ["market_data", "other"],
+      "notes": "Secondary market and company-data cross-check. Confirm terms and access limits before automated collection."
+    },
+    {
+      "provider": "PSX Terminal",
+      "base_url": "https://psxterminal.com/",
+      "role": "secondary",
+      "source_types": ["market_data", "other"],
+      "notes": "Secondary market-data cross-check. Preserve retrieval time and page URL."
+    },
+    {
+      "provider": "Ticker Analysts",
+      "base_url": "https://tickeranalysts.com/",
+      "role": "secondary",
+      "source_types": ["market_data", "other"],
+      "notes": "Secondary company-analysis cross-check. Do not treat commentary as a primary financial statement."
+    },
+    {
+      "provider": "SCS Trade",
+      "base_url": "https://scstrade.com/",
+      "role": "secondary",
+      "source_types": ["market_data", "other"],
+      "notes": "Secondary market-data cross-check. Preserve methodology and retrieval time."
+    },
+    {
+      "provider": "FinHisaab",
+      "base_url": "https://finhisaab.com/",
+      "role": "secondary",
+      "source_types": ["market_data", "other"],
+      "notes": "Secondary financial-data cross-check. Do not overwrite official filing facts with unverified values."
+    }
+  ]
+}

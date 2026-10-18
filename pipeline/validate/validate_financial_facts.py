@@ -6,7 +6,7 @@ from pathlib import Path
 from collections import Counter
 
 ROOT = Path(__file__).resolve().parents[2]
-FACTS_FILE = ROOT / "data/normalized/FFC/financial_facts.json"
+DEFAULT_COMPANY = "FFC"
 REGISTRY_FILE = ROOT / "data/source_registry.json"
 
 ALLOWED_SCOPES = {"standalone", "consolidated"}
@@ -15,6 +15,9 @@ ALLOWED_STATUSES = {
     "estimated", "missing",
 }
 ALLOWED_UNITS = {"PKR_thousand", "PKR", "PKR_per_share"}
+ALLOWED_CLASSIFICATIONS = {
+    "reported", "calculated", "estimated", "missing", "management_provided",
+}
 
 errors = []
 warnings = []
@@ -49,8 +52,9 @@ def load_json(path):
         return None
 
 
-def main():
-    data = load_json(FACTS_FILE)
+def main(company=DEFAULT_COMPANY):
+    facts_file = ROOT / "data" / "normalized" / company / "financial_facts.json"
+    data = load_json(facts_file)
     registry_data = load_json(REGISTRY_FILE)
 
     if data is None or registry_data is None:
@@ -83,6 +87,7 @@ def main():
     required = {
         "metric", "scope", "period_end", "period_type", "value",
         "unit", "source_id", "source_page", "verification_status",
+        "fact_classification",
     }
 
     seen = Counter()
@@ -105,6 +110,9 @@ def main():
                 f"{label}: status is "
                 f"{fact['verification_status']!r}, not verified"
             )
+
+        if fact["fact_classification"] not in ALLOWED_CLASSIFICATIONS:
+            error(f"{label}: invalid fact classification")
 
         if fact["unit"] not in ALLOWED_UNITS:
             error(f"{label}: unsupported unit {fact['unit']!r}")
@@ -201,4 +209,10 @@ def report():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Validate normalized financial facts for any company."
+    )
+    parser.add_argument("--company", default=DEFAULT_COMPANY)
+    sys.exit(main(parser.parse_args().company))

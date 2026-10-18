@@ -1,0 +1,51 @@
+{
+  "company_id": "ABC",
+  "purpose": "Evidence package for Hermes fundamental analysis",
+  "instructions": [
+    "Use only verified facts for material claims.",
+    "Cite source_id and source_page for reported facts.",
+    "Treat derived metrics as calculations and preserve their formulas.",
+    "Do not invent missing market, dividend, debt, segment, or peer data.",
+    "Explain all material data gaps and uncertainty.",
+    "Do not issue a recommendation when valuation inputs are unavailable."
+  ],
+  "latest_period": {
+    "period_end": null,
+    "period_type": null,
+    "verified_fact_count": 0
+  },
+  "financial_quality": {
+    "total_fact_count": 0,
+    "verified_fact_count": 0,
+    "unverified_fact_count": 0,
+    "source_count": 0
+  },
+  "derived_metrics": [],
+  "market_data": {
+    "company_id": "ABC",
+    "currency": "PKR",
+    "observations": []
+  },
+  "valuation": {
+    "status": "unavailable",
+    "required_inputs": [
+      "current_price",
+      "shares_outstanding",
+      "earnings_per_share",
+      "dividend_per_share"
+    ]
+  },
+  "gaps": [
+    "market_data.json exists but contains no observations; current price, market cap, valuation multiples, and dividend yield are unavailable.",
+    "Debt and leverage metrics are not present in the normalized facts.",
+    "Dividend history is not present in the normalized facts.",
+    "Segment-level operating data is not present in the normalized facts."
+  ],
+  "sources": [],
+  "artifacts": {
+    "financial_facts": "data/normalized/ABC/financial_facts.json",
+    "derived_metrics": "data/derived/ABC/derived_metrics.json",
+    "analysis_json": "reports/ABC/fundamental_analysis.json",
+    "analysis_markdown": "reports/ABC/fundamental_analysis.md"
+  }
+}

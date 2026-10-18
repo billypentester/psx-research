@@ -1,0 +1,6 @@
+{
+  "company_id": "LUCKY",
+  "currency": "PKR",
+  "source": "data/normalized/LUCKY/financial_facts.json",
+  "metrics": []
+}

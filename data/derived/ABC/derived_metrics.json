@@ -1,0 +1,6 @@
+{
+  "company_id": "ABC",
+  "currency": "PKR",
+  "source": "data/normalized/ABC/financial_facts.json",
+  "metrics": []
+}

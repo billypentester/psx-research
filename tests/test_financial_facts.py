@@ -16,6 +16,9 @@ ALLOWED_STATUSES = {
     "missing",
 }
 ALLOWED_UNITS = {"PKR_thousand", "PKR", "PKR_per_share"}
+ALLOWED_CLASSIFICATIONS = {
+    "reported", "calculated", "estimated", "missing", "management_provided",
+}
 
 
 class TestFinancialFacts(unittest.TestCase):
@@ -33,7 +36,7 @@ class TestFinancialFacts(unittest.TestCase):
         required = {
             "metric", "scope", "period_end", "period_type",
             "value", "unit", "source_id", "source_page",
-            "verification_status",
+            "verification_status", "fact_classification",
         }
         for index, fact in enumerate(self.facts):
             with self.subTest(fact=index):
@@ -50,6 +53,10 @@ class TestFinancialFacts(unittest.TestCase):
     def test_valid_unit(self):
         for fact in self.facts:
             self.assertIn(fact["unit"], ALLOWED_UNITS)
+
+    def test_valid_classification(self):
+        for fact in self.facts:
+            self.assertIn(fact["fact_classification"], ALLOWED_CLASSIFICATIONS)
 
     def test_valid_period_date(self):
         for fact in self.facts:
@@ -77,6 +84,11 @@ class TestFinancialFacts(unittest.TestCase):
     def test_standalone_and_consolidated_are_distinct(self):
         scopes = {fact["scope"] for fact in self.facts}
         self.assertTrue(scopes.issubset(ALLOWED_SCOPES))
+
+    def test_reported_facts_are_classified_as_reported(self):
+        self.assertTrue(
+            all(fact["fact_classification"] == "reported" for fact in self.facts)
+        )
 
 
 if __name__ == "__main__":

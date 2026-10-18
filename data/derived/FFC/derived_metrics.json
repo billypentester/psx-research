@@ -1,0 +1,1279 @@
+{
+  "company_id": "FFC",
+  "currency": "PKR",
+  "source": "data/normalized/FFC/financial_facts.json",
+  "metrics": [
+    {
+      "metric": "revenue_growth",
+      "scope": "consolidated",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": null,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        null
+      ],
+      "classification": "missing",
+      "calculation_status": "missing",
+      "missing_reason": "prior period unavailable"
+    },
+    {
+      "metric": "gross_margin",
+      "scope": "consolidated",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": 0.34952878438434254,
+      "unit": "ratio",
+      "formula": "gross_profit / net_turnover",
+      "inputs": [
+        {
+          "metric": "gross_profit",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "gross_profit",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "net_profit_margin",
+      "scope": "consolidated",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": 0.2079621322480165,
+      "unit": "ratio",
+      "formula": "profit_after_tax / net_turnover",
+      "inputs": [
+        {
+          "metric": "profit_after_tax",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "profit_after_tax",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "eps_growth",
+      "scope": "consolidated",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": null,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "earnings_per_share",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_per_share",
+          "fact_key": [
+            "earnings_per_share",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_per_share"
+          ]
+        },
+        null
+      ],
+      "classification": "missing",
+      "calculation_status": "missing",
+      "missing_reason": "prior period unavailable"
+    },
+    {
+      "metric": "asset_growth",
+      "scope": "consolidated",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": null,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "total_assets",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        null
+      ],
+      "classification": "missing",
+      "calculation_status": "missing",
+      "missing_reason": "prior period unavailable"
+    },
+    {
+      "metric": "operating_cash_flow_margin",
+      "scope": "consolidated",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": 0.31229505842867433,
+      "unit": "ratio",
+      "formula": "net_cash_from_operating_activities / net_turnover",
+      "inputs": [
+        {
+          "metric": "net_cash_from_operating_activities",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_cash_from_operating_activities",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "cash_conversion",
+      "scope": "consolidated",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": 1.501691942916944,
+      "unit": "ratio",
+      "formula": "net_cash_from_operating_activities / profit_after_tax",
+      "inputs": [
+        {
+          "metric": "net_cash_from_operating_activities",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_cash_from_operating_activities",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "profit_after_tax",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "profit_after_tax",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "asset_turnover",
+      "scope": "consolidated",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": null,
+      "unit": "ratio",
+      "formula": "net_turnover / average(total_assets)",
+      "inputs": [
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "total_assets",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        null
+      ],
+      "classification": "missing",
+      "calculation_status": "missing",
+      "missing_reason": "two asset periods required"
+    },
+    {
+      "metric": "revenue_growth",
+      "scope": "consolidated",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.17641914162087646,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "gross_margin",
+      "scope": "consolidated",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.3077247697410929,
+      "unit": "ratio",
+      "formula": "gross_profit / net_turnover",
+      "inputs": [
+        {
+          "metric": "gross_profit",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "gross_profit",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "net_profit_margin",
+      "scope": "consolidated",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.17557870943562767,
+      "unit": "ratio",
+      "formula": "profit_after_tax / net_turnover",
+      "inputs": [
+        {
+          "metric": "profit_after_tax",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "profit_after_tax",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "eps_growth",
+      "scope": "consolidated",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": -0.014336313037611736,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "earnings_per_share",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_per_share",
+          "fact_key": [
+            "earnings_per_share",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_per_share"
+          ]
+        },
+        {
+          "metric": "earnings_per_share",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_per_share",
+          "fact_key": [
+            "earnings_per_share",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_per_share"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "asset_growth",
+      "scope": "consolidated",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.06905333751608178,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "total_assets",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "total_assets",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "operating_cash_flow_margin",
+      "scope": "consolidated",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.11068624888788427,
+      "unit": "ratio",
+      "formula": "net_cash_from_operating_activities / net_turnover",
+      "inputs": [
+        {
+          "metric": "net_cash_from_operating_activities",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_cash_from_operating_activities",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "cash_conversion",
+      "scope": "consolidated",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.6304081471134466,
+      "unit": "ratio",
+      "formula": "net_cash_from_operating_activities / profit_after_tax",
+      "inputs": [
+        {
+          "metric": "net_cash_from_operating_activities",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_cash_from_operating_activities",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "profit_after_tax",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "profit_after_tax",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "asset_turnover",
+      "scope": "consolidated",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.8151896747647059,
+      "unit": "ratio",
+      "formula": "net_turnover / average(total_assets)",
+      "inputs": [
+        {
+          "metric": "net_turnover",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "total_assets",
+          "scope": "consolidated",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "consolidated",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "total_assets",
+          "scope": "consolidated",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "consolidated",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "revenue_growth",
+      "scope": "standalone",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": null,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        null
+      ],
+      "classification": "missing",
+      "calculation_status": "missing",
+      "missing_reason": "prior period unavailable"
+    },
+    {
+      "metric": "gross_margin",
+      "scope": "standalone",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": 0.34045515233139473,
+      "unit": "ratio",
+      "formula": "gross_profit / net_turnover",
+      "inputs": [
+        {
+          "metric": "gross_profit",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "gross_profit",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "net_profit_margin",
+      "scope": "standalone",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": 0.1732932824953421,
+      "unit": "ratio",
+      "formula": "profit_after_tax / net_turnover",
+      "inputs": [
+        {
+          "metric": "profit_after_tax",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "profit_after_tax",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "eps_growth",
+      "scope": "standalone",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": null,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "earnings_per_share",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_per_share",
+          "fact_key": [
+            "earnings_per_share",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_per_share"
+          ]
+        },
+        null
+      ],
+      "classification": "missing",
+      "calculation_status": "missing",
+      "missing_reason": "prior period unavailable"
+    },
+    {
+      "metric": "asset_growth",
+      "scope": "standalone",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": null,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "total_assets",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        null
+      ],
+      "classification": "missing",
+      "calculation_status": "missing",
+      "missing_reason": "prior period unavailable"
+    },
+    {
+      "metric": "operating_cash_flow_margin",
+      "scope": "standalone",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": 0.28485765744387465,
+      "unit": "ratio",
+      "formula": "net_cash_from_operating_activities / net_turnover",
+      "inputs": [
+        {
+          "metric": "net_cash_from_operating_activities",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_cash_from_operating_activities",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "cash_conversion",
+      "scope": "standalone",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": 1.643789380304059,
+      "unit": "ratio",
+      "formula": "net_cash_from_operating_activities / profit_after_tax",
+      "inputs": [
+        {
+          "metric": "net_cash_from_operating_activities",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_cash_from_operating_activities",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "profit_after_tax",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "profit_after_tax",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "asset_turnover",
+      "scope": "standalone",
+      "period_end": "2024-12-31",
+      "period_type": "annual",
+      "value": null,
+      "unit": "ratio",
+      "formula": "net_turnover / average(total_assets)",
+      "inputs": [
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "total_assets",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        null
+      ],
+      "classification": "missing",
+      "calculation_status": "missing",
+      "missing_reason": "two asset periods required"
+    },
+    {
+      "metric": "revenue_growth",
+      "scope": "standalone",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.15761098795803097,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "gross_margin",
+      "scope": "standalone",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.3020526356714285,
+      "unit": "ratio",
+      "formula": "gross_profit / net_turnover",
+      "inputs": [
+        {
+          "metric": "gross_profit",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "gross_profit",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "net_profit_margin",
+      "scope": "standalone",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.17012601844123362,
+      "unit": "ratio",
+      "formula": "profit_after_tax / net_turnover",
+      "inputs": [
+        {
+          "metric": "profit_after_tax",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "profit_after_tax",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "eps_growth",
+      "scope": "standalone",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.13629369092108146,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "earnings_per_share",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_per_share",
+          "fact_key": [
+            "earnings_per_share",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_per_share"
+          ]
+        },
+        {
+          "metric": "earnings_per_share",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_per_share",
+          "fact_key": [
+            "earnings_per_share",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_per_share"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "asset_growth",
+      "scope": "standalone",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.04924649525730951,
+      "unit": "ratio",
+      "formula": "current / prior - 1",
+      "inputs": [
+        {
+          "metric": "total_assets",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "total_assets",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "operating_cash_flow_margin",
+      "scope": "standalone",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.08549997715943229,
+      "unit": "ratio",
+      "formula": "net_cash_from_operating_activities / net_turnover",
+      "inputs": [
+        {
+          "metric": "net_cash_from_operating_activities",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_cash_from_operating_activities",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "cash_conversion",
+      "scope": "standalone",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 0.5025684956529235,
+      "unit": "ratio",
+      "formula": "net_cash_from_operating_activities / profit_after_tax",
+      "inputs": [
+        {
+          "metric": "net_cash_from_operating_activities",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_cash_from_operating_activities",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "profit_after_tax",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "profit_after_tax",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    },
+    {
+      "metric": "asset_turnover",
+      "scope": "standalone",
+      "period_end": "2025-12-31",
+      "period_type": "annual",
+      "value": 1.0121530701060408,
+      "unit": "ratio",
+      "formula": "net_turnover / average(total_assets)",
+      "inputs": [
+        {
+          "metric": "net_turnover",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "net_turnover",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "total_assets",
+          "scope": "standalone",
+          "period_end": "2025-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "standalone",
+            "2025-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        },
+        {
+          "metric": "total_assets",
+          "scope": "standalone",
+          "period_end": "2024-12-31",
+          "period_type": "annual",
+          "unit": "PKR_thousand",
+          "fact_key": [
+            "total_assets",
+            "standalone",
+            "2024-12-31",
+            "annual",
+            "PKR_thousand"
+          ]
+        }
+      ],
+      "classification": "calculated",
+      "calculation_status": "calculated"
+    }
+  ]
+}

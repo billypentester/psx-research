@@ -1,0 +1,128 @@
+FFC SECOND-PASS OCR COMPARISON
+==================================
+Facts examined: 60
+
+VALUE_FOUND: 60
+
+DETAILS
+==================================
+[VALUE_FOUND] standalone | net_turnover | 2025-12-31 | stored=432410443 PKR_thousand | status=verified | PDF page=4
+  OCR: R ENDED DECEMBER 31, 2025 2025 2024 (Rupees '000) Turnover - net 432,410,443 373,536,920 Cost of sales (301,799,729) (246,364,351) GROSS PROF
+[VALUE_FOUND] standalone | gross_profit | 2025-12-31 | stored=130610714 PKR_thousand | status=verified | PDF page=4
+  OCR: 3,536,920 Cost of sales (301,799,729) (246,364,351) GROSS PROFIT 130,610,714 127,172,569 Distribution cost (32,338,831) (29,363,654) 98,271,8
+[VALUE_FOUND] standalone | profit_after_tax | 2025-12-31 | stored=73564267 PKR_thousand | status=verified | PDF page=4
+  OCR: ision for taxation (47,291,413) (44,352,416) PROFIT FOR THE YEAR 73,564,267 64,731,439 Earnings per share - basic and diluted (Rupees) 51.69
+[VALUE_FOUND] standalone | earnings_per_share | 2025-12-31 | stored=51.69 PKR_per_share | status=verified | PDF page=4
+  OCR: 4,267 64,731,439 Earnings per share - basic and diluted (Rupees) 51.69 45.49
+[VALUE_FOUND] consolidated | net_turnover | 2025-12-31 | stored=483807560 PKR_thousand | status=verified | PDF page=8
+  OCR: R ENDED DECEMBER 31, 2025 2025 2024 (Rupees ‘000) Turnover - net 483,807,560 411,254,410 Cost of sales (334,927,990) (267,509,156) GROSS PROF
+[VALUE_FOUND] consolidated | profit_after_tax | 2025-12-31 | stored=84946307 PKR_thousand | status=verified | PDF page=8
+  OCR: ision for taxation (51,235,462) (55,064,201) PROFIT FOR THE YEAR 84,946,307 85,525,344 ATTRIBUTABLE TO: Equity holders of Fauji Fertilizer C
+[VALUE_FOUND] consolidated | profit_attributable_to_parent | 2025-12-31 | stored=83170819 PKR_thousand | status=verified | PDF page=8
+  OCR: RIBUTABLE TO: Equity holders of Fauji Fertilizer Company Limited 83,170,819 84,379,493 Non - controlling interest 1,775,488 1,145,851 84,946
+[VALUE_FOUND] consolidated | earnings_per_share | 2025-12-31 | stored=58.44 PKR_per_share | status=verified | PDF page=8
+  OCR: 6,307 85,525,344 Earnings per share - basic and diluted (Rupees) 58.44 59.29
+[VALUE_FOUND] standalone | total_assets | 2025-12-31 | stored=437485133 PKR_thousand | status=verified | PDF page=3
+  OCR: LIABILITIES 301,901,608 285,071,605 TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722
+[VALUE_FOUND] standalone | total_equity_and_liabilities | 2025-12-31 | stored=437485133 PKR_thousand | status=verified | PDF page=3
+  OCR: LIABILITIES 301,901,608 285,071,605 TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722
+[VALUE_FOUND] standalone | total_assets | 2024-12-31 | stored=416951722 PKR_thousand | status=verified | PDF page=3
+  OCR: 301,901,608 285,071,605 TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722
+[VALUE_FOUND] standalone | total_equity_and_liabilities | 2024-12-31 | stored=416951722 PKR_thousand | status=verified | PDF page=3
+  OCR: 301,901,608 285,071,605 TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722
+[VALUE_FOUND] consolidated | total_assets | 2025-12-31 | stored=613298162 PKR_thousand | status=verified | PDF page=7
+  OCR: LITIES ~ 348,493,210 328,792,821 TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408
+[VALUE_FOUND] consolidated | total_equity_and_liabilities | 2025-12-31 | stored=613298162 PKR_thousand | status=verified | PDF page=7
+  OCR: LITIES ~ 348,493,210 328,792,821 TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408
+[VALUE_FOUND] consolidated | total_assets | 2024-12-31 | stored=573683408 PKR_thousand | status=verified | PDF page=7
+  OCR: 93,210 328,792,821 TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408
+[VALUE_FOUND] consolidated | total_equity_and_liabilities | 2024-12-31 | stored=573683408 PKR_thousand | status=verified | PDF page=7
+  OCR: 93,210 328,792,821 TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408
+[VALUE_FOUND] standalone | net_turnover | 2024-12-31 | stored=373536920 PKR_thousand | status=verified | PDF page=4
+  OCR: MBER 31, 2025 2025 2024 (Rupees '000) Turnover - net 432,410,443 373,536,920 Cost of sales (301,799,729) (246,364,351) GROSS PROFIT 130,610,7
+[VALUE_FOUND] standalone | gross_profit | 2024-12-31 | stored=127172569 PKR_thousand | status=verified | PDF page=4
+  OCR: st of sales (301,799,729) (246,364,351) GROSS PROFIT 130,610,714 127,172,569 Distribution cost (32,338,831) (29,363,654) 98,271,883 97,808,91
+[VALUE_FOUND] standalone | profit_after_tax | 2024-12-31 | stored=64731439 PKR_thousand | status=verified | PDF page=4
+  OCR: axation (47,291,413) (44,352,416) PROFIT FOR THE YEAR 73,564,267 64,731,439 Earnings per share - basic and diluted (Rupees) 51.69 45.49
+[VALUE_FOUND] standalone | earnings_per_share | 2024-12-31 | stored=45.49 PKR_per_share | status=verified | PDF page=4
+  OCR: 64,731,439 Earnings per share - basic and diluted (Rupees) 51.69 45.49
+[VALUE_FOUND] consolidated | net_turnover | 2024-12-31 | stored=411254410 PKR_thousand | status=verified | PDF page=8
+  OCR: MBER 31, 2025 2025 2024 (Rupees ‘000) Turnover - net 483,807,560 411,254,410 Cost of sales (334,927,990) (267,509,156) GROSS PROFIT 148,879,5
+[VALUE_FOUND] consolidated | gross_profit | 2025-12-31 | stored=148879570 PKR_thousand | status=verified | PDF page=8
+  OCR: 1,254,410 Cost of sales (334,927,990) (267,509,156) GROSS PROFIT 148,879,570 143,745,254 Administrative and distribution expenses (38,085,058
+[VALUE_FOUND] consolidated | gross_profit | 2024-12-31 | stored=143745254 PKR_thousand | status=verified | PDF page=8
+  OCR: st of sales (334,927,990) (267,509,156) GROSS PROFIT 148,879,570 143,745,254 Administrative and distribution expenses (38,085,058) (31,986,14
+[VALUE_FOUND] consolidated | profit_after_tax | 2024-12-31 | stored=85525344 PKR_thousand | status=verified | PDF page=8
+  OCR: axation (51,235,462) (55,064,201) PROFIT FOR THE YEAR 84,946,307 85,525,344 ATTRIBUTABLE TO: Equity holders of Fauji Fertilizer Company Limi
+[VALUE_FOUND] consolidated | profit_attributable_to_parent | 2024-12-31 | stored=84379493 PKR_thousand | status=verified | PDF page=8
+  OCR: O: Equity holders of Fauji Fertilizer Company Limited 83,170,819 84,379,493 Non - controlling interest 1,775,488 1,145,851 84,946,307 85,525
+[VALUE_FOUND] consolidated | earnings_per_share | 2024-12-31 | stored=59.29 PKR_per_share | status=verified | PDF page=8
+  OCR: 85,525,344 Earnings per share - basic and diluted (Rupees) 58.44 59.29
+[VALUE_FOUND] standalone | cash_generated_from_operations | 2025-12-31 | stored=93364120 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: H FLOWS FROM OPERATING ACTIVITIES Cash generated from operations 93,364,120 159,563,509 Finance cost paid (6,501,105) (7,441,365) Income tax
+[VALUE_FOUND] standalone | cash_generated_from_operations | 2024-12-31 | stored=159563509 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: M OPERATING ACTIVITIES Cash generated from operations 93,364,120 159,563,509 Finance cost paid (6,501,105) (7,441,365) Income taxes paid (49,
+[VALUE_FOUND] standalone | net_cash_from_operating_activities | 2025-12-31 | stored=36971083 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: 3,037) (53,158,657) Net cash generated from operating activities 36,971,083 106,404,852 CASH FLOWS FROM INVESTING ACTIVITIES Fixed capital e
+[VALUE_FOUND] standalone | net_cash_from_operating_activities | 2024-12-31 | stored=106404852 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: 158,657) Net cash generated from operating activities 36,971,083 106,404,852 CASH FLOWS FROM INVESTING ACTIVITIES Fixed capital expenditure (
+[VALUE_FOUND] standalone | net_cash_from_investing_activities | 2025-12-31 | stored=-2428806 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: ,828,748 Net cash (used in)/ generated from investing activities (2,428,806) (11,031,754) CASH FLOWS FROM FINANCING ACTIVITIES Long term fina
+[VALUE_FOUND] standalone | net_cash_from_investing_activities | 2024-12-31 | stored=-11031754 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: cash (used in)/ generated from investing activities (2,428,806) (11,031,754) CASH FLOWS FROM FINANCING ACTIVITIES Long term financing: Draw-d
+[VALUE_FOUND] standalone | net_cash_from_financing_activities | 2025-12-31 | stored=-47155954 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: (70,255,954) (24,927,681 Net cash (used in) financing activities (47,155,954) (24,124,161) Net (decrease) increase in cash and cash equivalent
+[VALUE_FOUND] standalone | net_cash_from_financing_activities | 2024-12-31 | stored=-24124161 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: (24,927,681 Net cash (used in) financing activities (47,155,954) (24,124,161) Net (decrease) increase in cash and cash equivalents (12,613,677
+[VALUE_FOUND] standalone | net_change_in_cash_and_cash_equivalents | 2025-12-31 | stored=-12613677 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: 24,124,161) Net (decrease) increase in cash and cash equivalents (12,613,677) 71,248,937 Cash and cash equivalents at beginning of the year 17
+[VALUE_FOUND] standalone | net_change_in_cash_and_cash_equivalents | 2024-12-31 | stored=71248937 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: et (decrease) increase in cash and cash equivalents (12,613,677) 71,248,937 Cash and cash equivalents at beginning of the year 176,715,058 7
+[VALUE_FOUND] standalone | cash_and_cash_equivalents_beginning | 2025-12-31 | stored=176715058 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: 7) 71,248,937 Cash and cash equivalents at beginning of the year 176,715,058 79,766,068 Effect of exchange rate changes (792,384) (249,807) A
+[VALUE_FOUND] standalone | cash_and_cash_equivalents_beginning | 2024-12-31 | stored=79766068 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: 7 Cash and cash equivalents at beginning of the year 176,715,058 79,766,068 Effect of exchange rate changes (792,384) (249,807) Acquisition
+[VALUE_FOUND] standalone | effect_of_exchange_rate_changes | 2025-12-31 | stored=-792384 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: the year 176,715,058 79,766,068 Effect of exchange rate changes (792,384) (249,807) Acquisition of cash and cash equivalents pursuant to m
+[VALUE_FOUND] standalone | effect_of_exchange_rate_changes | 2024-12-31 | stored=-249807 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: 176,715,058 79,766,068 Effect of exchange rate changes (792,384) (249,807) Acquisition of cash and cash equivalents pursuant to merger - 25
+[VALUE_FOUND] standalone | cash_and_cash_equivalents_ending | 2025-12-31 | stored=163308997 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: merger - 25,949,860 Cash and cash equivalents at end of the year 163,308,997 176,775,058
+[VALUE_FOUND] standalone | cash_and_cash_equivalents_ending | 2024-12-31 | stored=176715058 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: 7) 71,248,937 Cash and cash equivalents at beginning of the year 176,715,058 79,766,068 Effect of exchange rate changes (792,384) (249,807) A
+[VALUE_FOUND] standalone | cash_and_cash_equivalents_acquired_through_merger | 2024-12-31 | stored=25949860 PKR_thousand | status=ocr_unverified | PDF page=6
+  OCR: 7) Acquisition of cash and cash equivalents pursuant to merger - 25,949,860 Cash and cash equivalents at end of the year 163,308,997 176,775
+[VALUE_FOUND] consolidated | cash_generated_from_operations | 2025-12-31 | stored=111479414 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: H FLOWS FROM OPERATING ACTIVITIES Cash generated from operations 111,479,414 183,664 281 Finance cost paid (7,027,990) (8,766,265) income tax
+[VALUE_FOUND] consolidated | cash_generated_from_operations | 2024-12-31 | stored=183664281 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: OPERATING ACTIVITIES Cash generated from operations 111,479,414 183,664 281 Finance cost paid (7,027,990) (8,766,265) income tax paid (50,78
+[VALUE_FOUND] consolidated | net_cash_from_operating_activities | 2025-12-31 | stored=53550844 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: 8,570) (55,231,561) Net cash generated from operating activities 53,550,844 128,432,720 CASH FLOWS FROM INVESTING ACTIVITIES Fixed capital e
+[VALUE_FOUND] consolidated | net_cash_from_operating_activities | 2024-12-31 | stored=128432720 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: 231,561) Net cash generated from operating activities 53,550,844 128,432,720 CASH FLOWS FROM INVESTING ACTIVITIES Fixed capital expenditure (
+[VALUE_FOUND] consolidated | net_cash_from_investing_activities | 2025-12-31 | stored=-13192148 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: ved 13,369,449 3,249,627 Net cash (used in) investing activities (13,192,148) (14,986,188) CASH FLOWS FROM FINANCING ACTIVITIES Long term borr
+[VALUE_FOUND] consolidated | net_cash_from_investing_activities | 2024-12-31 | stored=-14986188 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: 9 3,249,627 Net cash (used in) investing activities (13,192,148) (14,986,188) CASH FLOWS FROM FINANCING ACTIVITIES Long term borrowings: Draw-
+[VALUE_FOUND] consolidated | net_cash_from_financing_activities | 2025-12-31 | stored=-48638010 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: 71,010,880 (25,739,051 ) Net cash (used in) financing activities (48,638,010) (35,612,648) Net (decrease) / increase in cash and cash equivale
+[VALUE_FOUND] consolidated | net_cash_from_financing_activities | 2024-12-31 | stored=-35612648 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: 5,739,051 ) Net cash (used in) financing activities (48,638,010) (35,612,648) Net (decrease) / increase in cash and cash equivalents (8,279,31
+[VALUE_FOUND] consolidated | net_change_in_cash_and_cash_equivalents | 2025-12-31 | stored=-8279314 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: ,612,648) Net (decrease) / increase in cash and cash equivalents (8,279,314) 77,833,884 Cash and cash equivalents at beginning of the year 19
+[VALUE_FOUND] consolidated | net_change_in_cash_and_cash_equivalents | 2024-12-31 | stored=77833884 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: t (decrease) / increase in cash and cash equivalents (8,279,314) 77,833,884 Cash and cash equivalents at beginning of the year 191,619,934 8
+[VALUE_FOUND] consolidated | cash_and_cash_equivalents_beginning | 2025-12-31 | stored=191619934 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: 4) 77,833,884 Cash and cash equivalents at beginning of the year 191,619,934 86,315,120 Effect of exchange rate changes (854,486) (263,891) A
+[VALUE_FOUND] consolidated | cash_and_cash_equivalents_beginning | 2024-12-31 | stored=86315120 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: 4 Cash and cash equivalents at beginning of the year 191,619,934 86,315,120 Effect of exchange rate changes (854,486) (263,891) Acquisition
+[VALUE_FOUND] consolidated | effect_of_exchange_rate_changes | 2025-12-31 | stored=-854486 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: the year 191,619,934 86,315,120 Effect of exchange rate changes (854,486) (263,891) Acquisition of cash and cash equivalents pursuant to m
+[VALUE_FOUND] consolidated | effect_of_exchange_rate_changes | 2024-12-31 | stored=-263891 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: 191,619,934 86,315,120 Effect of exchange rate changes (854,486) (263,891) Acquisition of cash and cash equivalents pursuant to merger - 27
+[VALUE_FOUND] consolidated | cash_and_cash_equivalents_ending | 2025-12-31 | stored=182486134 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: merger - 27,734,821 Cash and cash equivalents at end of the year 182,486,134 191,619,934
+[VALUE_FOUND] consolidated | cash_and_cash_equivalents_ending | 2024-12-31 | stored=191619934 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: 4) 77,833,884 Cash and cash equivalents at beginning of the year 191,619,934 86,315,120 Effect of exchange rate changes (854,486) (263,891) A
+[VALUE_FOUND] consolidated | cash_and_cash_equivalents_acquired_through_merger | 2024-12-31 | stored=27734821 PKR_thousand | status=ocr_unverified | PDF page=10
+  OCR: 1) Acquisition of cash and cash equivalents pursuant to merger - 27,734,821 Cash and cash equivalents at end of the year 182,486,134 191,619

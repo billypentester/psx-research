@@ -1,0 +1,129 @@
+FFC ROW-AWARE VERIFICATION REPORT
+==================================
+Facts examined: 60
+
+Status counts:
+ROW_LABEL_AND_VALUE_FOUND: 60
+
+DETAILS
+==================================
+[ROW_LABEL_AND_VALUE_FOUND] standalone | net_turnover | 2025-12-31 | stored=432410443 PKR_thousand | existing_status=verified | PDF page=4
+  OCR row: Turnover - net 432,410,443 373,536,920
+[ROW_LABEL_AND_VALUE_FOUND] standalone | gross_profit | 2025-12-31 | stored=130610714 PKR_thousand | existing_status=verified | PDF page=4
+  OCR row: GROSS PROFIT 130,610,714 127,172,569
+[ROW_LABEL_AND_VALUE_FOUND] standalone | profit_after_tax | 2025-12-31 | stored=73564267 PKR_thousand | existing_status=verified | PDF page=4
+  OCR row: PROFIT FOR THE YEAR 73,564,267 64,731,439
+[ROW_LABEL_AND_VALUE_FOUND] standalone | earnings_per_share | 2025-12-31 | stored=51.69 PKR_per_share | existing_status=verified | PDF page=4
+  OCR row: Earnings per share - basic and diluted (Rupees) 51.69 45.49
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | net_turnover | 2025-12-31 | stored=483807560 PKR_thousand | existing_status=verified | PDF page=8
+  OCR row: Turnover - net 483,807,560 411,254,410
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | profit_after_tax | 2025-12-31 | stored=84946307 PKR_thousand | existing_status=verified | PDF page=8
+  OCR row: PROFIT FOR THE YEAR 84,946,307 85,525,344
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | profit_attributable_to_parent | 2025-12-31 | stored=83170819 PKR_thousand | existing_status=verified | PDF page=8
+  OCR row: Equity holders of Fauji Fertilizer Company Limited 83,170,819 84,379,493
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | earnings_per_share | 2025-12-31 | stored=58.44 PKR_per_share | existing_status=verified | PDF page=8
+  OCR row: Earnings per share - basic and diluted (Rupees) 58.44 59.29
+[ROW_LABEL_AND_VALUE_FOUND] standalone | total_assets | 2025-12-31 | stored=437485133 PKR_thousand | existing_status=verified | PDF page=3
+  OCR row: TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722
+[ROW_LABEL_AND_VALUE_FOUND] standalone | total_equity_and_liabilities | 2025-12-31 | stored=437485133 PKR_thousand | existing_status=verified | PDF page=3
+  OCR row: TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722
+[ROW_LABEL_AND_VALUE_FOUND] standalone | total_assets | 2024-12-31 | stored=416951722 PKR_thousand | existing_status=verified | PDF page=3
+  OCR row: TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722
+[ROW_LABEL_AND_VALUE_FOUND] standalone | total_equity_and_liabilities | 2024-12-31 | stored=416951722 PKR_thousand | existing_status=verified | PDF page=3
+  OCR row: TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | total_assets | 2025-12-31 | stored=613298162 PKR_thousand | existing_status=verified | PDF page=7
+  OCR row: TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | total_equity_and_liabilities | 2025-12-31 | stored=613298162 PKR_thousand | existing_status=verified | PDF page=7
+  OCR row: TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | total_assets | 2024-12-31 | stored=573683408 PKR_thousand | existing_status=verified | PDF page=7
+  OCR row: TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | total_equity_and_liabilities | 2024-12-31 | stored=573683408 PKR_thousand | existing_status=verified | PDF page=7
+  OCR row: TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408
+[ROW_LABEL_AND_VALUE_FOUND] standalone | net_turnover | 2024-12-31 | stored=373536920 PKR_thousand | existing_status=verified | PDF page=4
+  OCR row: Turnover - net 432,410,443 373,536,920
+[ROW_LABEL_AND_VALUE_FOUND] standalone | gross_profit | 2024-12-31 | stored=127172569 PKR_thousand | existing_status=verified | PDF page=4
+  OCR row: GROSS PROFIT 130,610,714 127,172,569
+[ROW_LABEL_AND_VALUE_FOUND] standalone | profit_after_tax | 2024-12-31 | stored=64731439 PKR_thousand | existing_status=verified | PDF page=4
+  OCR row: PROFIT FOR THE YEAR 73,564,267 64,731,439
+[ROW_LABEL_AND_VALUE_FOUND] standalone | earnings_per_share | 2024-12-31 | stored=45.49 PKR_per_share | existing_status=verified | PDF page=4
+  OCR row: Earnings per share - basic and diluted (Rupees) 51.69 45.49
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | net_turnover | 2024-12-31 | stored=411254410 PKR_thousand | existing_status=verified | PDF page=8
+  OCR row: Turnover - net 483,807,560 411,254,410
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | gross_profit | 2025-12-31 | stored=148879570 PKR_thousand | existing_status=verified | PDF page=8
+  OCR row: GROSS PROFIT 148,879,570 143,745,254
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | gross_profit | 2024-12-31 | stored=143745254 PKR_thousand | existing_status=verified | PDF page=8
+  OCR row: GROSS PROFIT 148,879,570 143,745,254
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | profit_after_tax | 2024-12-31 | stored=85525344 PKR_thousand | existing_status=verified | PDF page=8
+  OCR row: PROFIT FOR THE YEAR 84,946,307 85,525,344
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | profit_attributable_to_parent | 2024-12-31 | stored=84379493 PKR_thousand | existing_status=verified | PDF page=8
+  OCR row: Equity holders of Fauji Fertilizer Company Limited 83,170,819 84,379,493
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | earnings_per_share | 2024-12-31 | stored=59.29 PKR_per_share | existing_status=verified | PDF page=8
+  OCR row: Earnings per share - basic and diluted (Rupees) 58.44 59.29
+[ROW_LABEL_AND_VALUE_FOUND] standalone | cash_generated_from_operations | 2025-12-31 | stored=93364120 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Cash generated from operations 93,364,120 159,563,509
+[ROW_LABEL_AND_VALUE_FOUND] standalone | cash_generated_from_operations | 2024-12-31 | stored=159563509 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Cash generated from operations 93,364,120 159,563,509
+[ROW_LABEL_AND_VALUE_FOUND] standalone | net_cash_from_operating_activities | 2025-12-31 | stored=36971083 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Net cash generated from operating activities 36,971,083 106,404,852
+[ROW_LABEL_AND_VALUE_FOUND] standalone | net_cash_from_operating_activities | 2024-12-31 | stored=106404852 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Net cash generated from operating activities 36,971,083 106,404,852
+[ROW_LABEL_AND_VALUE_FOUND] standalone | net_cash_from_investing_activities | 2025-12-31 | stored=-2428806 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Net cash (used in)/ generated from investing activities (2,428,806) (11,031,754)
+[ROW_LABEL_AND_VALUE_FOUND] standalone | net_cash_from_investing_activities | 2024-12-31 | stored=-11031754 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Net cash (used in)/ generated from investing activities (2,428,806) (11,031,754)
+[ROW_LABEL_AND_VALUE_FOUND] standalone | net_cash_from_financing_activities | 2025-12-31 | stored=-47155954 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Net cash (used in) financing activities (47,155,954) (24,124,161)
+[ROW_LABEL_AND_VALUE_FOUND] standalone | net_cash_from_financing_activities | 2024-12-31 | stored=-24124161 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Net cash (used in) financing activities (47,155,954) (24,124,161)
+[ROW_LABEL_AND_VALUE_FOUND] standalone | net_change_in_cash_and_cash_equivalents | 2025-12-31 | stored=-12613677 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Net (decrease) increase in cash and cash equivalents (12,613,677) 71,248,937
+[ROW_LABEL_AND_VALUE_FOUND] standalone | net_change_in_cash_and_cash_equivalents | 2024-12-31 | stored=71248937 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Net (decrease) increase in cash and cash equivalents (12,613,677) 71,248,937
+[ROW_LABEL_AND_VALUE_FOUND] standalone | cash_and_cash_equivalents_beginning | 2025-12-31 | stored=176715058 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Cash and cash equivalents at beginning of the year 176,715,058 79,766,068
+[ROW_LABEL_AND_VALUE_FOUND] standalone | cash_and_cash_equivalents_beginning | 2024-12-31 | stored=79766068 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Cash and cash equivalents at beginning of the year 176,715,058 79,766,068
+[ROW_LABEL_AND_VALUE_FOUND] standalone | effect_of_exchange_rate_changes | 2025-12-31 | stored=-792384 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Effect of exchange rate changes (792,384) (249,807)
+[ROW_LABEL_AND_VALUE_FOUND] standalone | effect_of_exchange_rate_changes | 2024-12-31 | stored=-249807 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Effect of exchange rate changes (792,384) (249,807)
+[ROW_LABEL_AND_VALUE_FOUND] standalone | cash_and_cash_equivalents_ending | 2025-12-31 | stored=163308997 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Cash and cash equivalents at end of the year 163,308,997 176,715,058
+[ROW_LABEL_AND_VALUE_FOUND] standalone | cash_and_cash_equivalents_ending | 2024-12-31 | stored=176715058 PKR_thousand | existing_status=verified | PDF page=6
+  OCR row: Cash and cash equivalents at end of the year 163,308,997 176,715,058
+[ROW_LABEL_AND_VALUE_FOUND] standalone | cash_and_cash_equivalents_acquired_through_merger | 2024-12-31 | stored=25949860 PKR_thousand | existing_status=ocr_unverified | PDF page=6
+  OCR row: Acquisition of cash and cash equivalents pursuant to merger - 25,949,860
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | cash_generated_from_operations | 2025-12-31 | stored=111479414 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Cash generated from operations 111,479,414 183,664,281
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | cash_generated_from_operations | 2024-12-31 | stored=183664281 PKR_thousand | existing_status=verified | PDF page=10
+  OCR row: Cash generated from operations 111,479,414 183,664,281
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | net_cash_from_operating_activities | 2025-12-31 | stored=53550844 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Net cash generated from operating activities 53,550,844 128,432,720
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | net_cash_from_operating_activities | 2024-12-31 | stored=128432720 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Net cash generated from operating activities 53,550,844 128,432,720
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | net_cash_from_investing_activities | 2025-12-31 | stored=-13192148 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Net cash (used in) investing activities (13,192,148) (14,986,188)
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | net_cash_from_investing_activities | 2024-12-31 | stored=-14986188 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Net cash (used in) investing activities (13,192,148) (14,986,188)
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | net_cash_from_financing_activities | 2025-12-31 | stored=-48638010 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Net cash (used in) financing activities (48,638,010) (35,612,648)
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | net_cash_from_financing_activities | 2024-12-31 | stored=-35612648 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Net cash (used in) financing activities (48,638,010) (35,612,648)
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | net_change_in_cash_and_cash_equivalents | 2025-12-31 | stored=-8279314 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Net (decrease) / increase in cash and cash equivalents (8,279,314) 77,833,884
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | net_change_in_cash_and_cash_equivalents | 2024-12-31 | stored=77833884 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Net (decrease) / increase in cash and cash equivalents (8,279,314) 77,833,884
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | cash_and_cash_equivalents_beginning | 2025-12-31 | stored=191619934 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Cash and cash equivalents at beginning of the year 191,619,934 86,315,120
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | cash_and_cash_equivalents_beginning | 2024-12-31 | stored=86315120 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Cash and cash equivalents at beginning of the year 191,619,934 86,315,120
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | effect_of_exchange_rate_changes | 2025-12-31 | stored=-854486 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Effect of exchange rate changes (854,486) (263,891)
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | effect_of_exchange_rate_changes | 2024-12-31 | stored=-263891 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Effect of exchange rate changes (854,486) (263,891)
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | cash_and_cash_equivalents_ending | 2025-12-31 | stored=182486134 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Cash and cash equivalents at end of the year 182,486,134 191,619,934
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | cash_and_cash_equivalents_ending | 2024-12-31 | stored=191619934 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Cash and cash equivalents at end of the year 182,486,134 191,619,934
+[ROW_LABEL_AND_VALUE_FOUND] consolidated | cash_and_cash_equivalents_acquired_through_merger | 2024-12-31 | stored=27734821 PKR_thousand | existing_status=ocr_unverified | PDF page=10
+  OCR row: Acquisition of cash and cash equivalents pursuant to merger - 27,734,821

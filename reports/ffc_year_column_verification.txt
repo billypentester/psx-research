@@ -1,0 +1,9 @@
+FFC YEAR-COLUMN VERIFICATION REPORT
+====================================
+Facts examined: 60
+
+Status counts:
+YEAR_COLUMN_VALUE_MATCH: 60
+
+DETAILS
+====================================

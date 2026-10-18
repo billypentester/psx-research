@@ -1,0 +1,32 @@
+FFC CASH-FLOW OCR DISCREPANCY REPORT
+======================================
+Metric: standalone cash_and_cash_equivalents_ending
+Period: 2024-12-31
+Stored value: 176,715,058 PKR_thousand
+Status: ocr_unverified
+
+File: data/normalized/FFC/ocr_diagnostics/page-6-psm-4.txt
+SHA-256: dba87f6f0e4685afdf8db3788f474bb539317689e575905235ffdf4ce9a5a1c2
+Cash and cash equivalents at beginning of the year 176,715,058 79,766,068
+Cash and cash equivalents at end of the year 163,308,997 176,775,058
+
+File: data/normalized/FFC/ocr_diagnostics/page-6-psm-6.txt
+SHA-256: 5f217e1861f33d7fdc15e56354692bd15d39dad9f84e23d362e72bedfee6c641
+Cash and cash equivalents at beginning of the year 176,715,058 79,766,068
+Cash and cash equivalents at end of the year 163,308,997 176,775,058
+
+File: data/normalized/FFC/ocr_diagnostics/600dpi/page-6-psm-4.txt
+SHA-256: 875ae8d6f8ffe72b9867949547affda73f9750b44e854399a6a7efd2de03f033
+Cash and cash equivalents at beginning of the year 176,715,058 79,766,068
+Cash and cash equivalents at end of the year 163,308,997 176,715,058
+
+File: data/normalized/FFC/ocr_diagnostics/600dpi/page-6-psm-6.txt
+SHA-256: 37bb2973e845a0505ceceaa066bcb0a5dfc1bd675a9d16ba8453e41a409747d8
+Cash and cash equivalents at beginning of the year 176,715,058 79,766,068
+Cash and cash equivalents at end of the year 163,308,997 176,715,058
+
+Assessment:
+- Both 600 DPI PSM 4 and PSM 6 support the stored value.
+- The 350 DPI PSM 4 and PSM 6 passes disagreed.
+- OCR corroboration is not direct source-image verification.
+- No dataset values or verification statuses were changed.

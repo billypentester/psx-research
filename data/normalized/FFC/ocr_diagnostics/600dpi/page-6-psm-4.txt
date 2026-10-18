@@ -1,0 +1,44 @@
+Annexure A- page 4 of 8
+FAUJ! FERTILIZER COMPANY LIMITED
+STATEMENT OF CASH FLOWS
+FOR THE YEAR ENDED DECEMBER 31, 2025
+
+2025 2024
+
+(Rupees '000)
+CASH FLOWS FROM OPERATING ACTIVITIES
+
+Cash generated from operations 93,364,120 159,563,509
+Finance cost paid (6,501,105) (7,441,365)
+Income taxes paid (49,885,586) (44,508,737)
+Levies paid (6,346) (1,208,555)
+(56,393,037) (53,158,657)
+Net cash generated from operating activities 36,971,083 106,404,852
+CASH FLOWS FROM INVESTING ACTIVITIES
+Fixed capital expenditure (23,579,289) (12,136,171)
+Proceeds from disposal of property, plant and equipment 73,598 62,341
+Proceeds from disposal of investment property - 855,958
+Investment in Fauji Fresh n Freeze Limited - (5,000,000)
+Investment in Agritech Limited (3,858,798) (10,992,049)
+Loan to Agritech Limited (1,318,294)
+Investment in OLIVE Technical Services (Private) Limited - (80,000)
+Other investments - net 2,178,248 2,145,801
+Interest and profit received 1,658,708 3,283,618
+Dividend received 22,417,021 10,828,748
+Net cash (used in)/ generated from investing activities (2,428,806) (11,031,754)
+
+CASH FLOWS FROM FINANCING ACTIVITIES
+Long term financing:
+
+Draw-downs 30,000,000 20,000,000
+Repayments (6,900,000) (19,178,333)
+Repayment of lease liabilities rn (18,147)
+Dividend paid (70,255,954) (24,927,681)
+Net cash (used in) financing activities (47,155,954) (24,124,161)
+Net (decrease) increase in cash and cash equivalents (12,613,677) 71,248,937
+Cash and cash equivalents at beginning of the year 176,715,058 79,766,068
+Effect of exchange rate changes (792,384) (249,807)
+
+Acquisition of cash and cash equivalents pursuant to merger ~ 25,949,860
+Cash and cash equivalents at end of the year 163,308,997 176,715,058
+

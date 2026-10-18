@@ -1,0 +1,42 @@
+FFC CASH-FLOW VISUAL VERIFICATION
+================================
+Verification date: 2026-10-18
+Company: FFC
+Metric: cash_and_cash_equivalents_ending
+Scope: standalone
+Period end: 2024-12-31
+Value: 176715058
+Unit: PKR_thousand
+Source ID: src_e4abb64ff4886ffc
+Source reference: Annexure A, page 4 of 8
+PDF page: 6
+Image inspected: data/normalized/FFC/ocr_diagnostics/600dpi/page-6.png
+Image SHA-256: 42b2bfa89daa310259114810f65a6d51b7e708c0d69318582bfc2ecb8e1bc74d
+
+Finding:
+The user visually inspected the high-resolution source-page image and
+confirmed that the 2024 ending-cash figure reads 176,715,058.
+
+Discrepancy:
+Some lower-resolution OCR output read 176,775,058. Higher-resolution
+OCR passes and the cash-flow reconciliation support the stored figure
+176,715,058. The OCR discrepancy is treated as an OCR recognition error.
+
+Status change:
+ocr_unverified -> verified
+
+Scope:
+Only this matching financial fact was updated. The numeric value was
+not changed. This evidence note records the user's visual confirmation;
+it does not claim independent visual inspection by the script.
+
+
+Visual verification — consolidated cash generated from operations, 2024
+Recorded at (UTC): 2026-10-18T13:23:39.320916+00:00
+Source ID: src_e4abb64ff4886ffc
+Source page: Annexure A, page 8 of 8 (PDF page 10)
+Stored value: 183,664,281 PKR thousand
+Evidence: user visually inspected the 600 DPI source image and confirmed the value.
+Image SHA-256: 465b121d9a0362b01616646e5bc0660a5b3be71a8214f2739c2fc4e5a0425fbd
+OCR correction: '183,664 281' -> '183,664,281'.
+The stored numerical value was not changed.

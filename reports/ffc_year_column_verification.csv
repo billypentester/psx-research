@@ -1,0 +1,61 @@
+metric,scope,period_end,stored_value,stored_status,pdf_page,year_column,ocr_value_in_year_column,ocr_row,check_status
+net_turnover,standalone,2025-12-31,432410443,verified,4,2025,432410443,"Turnover - net 432,410,443 373,536,920",YEAR_COLUMN_VALUE_MATCH
+gross_profit,standalone,2025-12-31,130610714,verified,4,2025,130610714,"GROSS PROFIT 130,610,714 127,172,569",YEAR_COLUMN_VALUE_MATCH
+profit_after_tax,standalone,2025-12-31,73564267,verified,4,2025,73564267,"PROFIT FOR THE YEAR 73,564,267 64,731,439",YEAR_COLUMN_VALUE_MATCH
+earnings_per_share,standalone,2025-12-31,51.69,verified,4,2025,51.69,Earnings per share - basic and diluted (Rupees) 51.69 45.49,YEAR_COLUMN_VALUE_MATCH
+net_turnover,consolidated,2025-12-31,483807560,verified,8,2025,483807560,"Turnover - net 483,807,560 411,254,410",YEAR_COLUMN_VALUE_MATCH
+profit_after_tax,consolidated,2025-12-31,84946307,verified,8,2025,84946307,"PROFIT FOR THE YEAR 84,946,307 85,525,344",YEAR_COLUMN_VALUE_MATCH
+profit_attributable_to_parent,consolidated,2025-12-31,83170819,verified,8,2025,83170819,"Equity holders of Fauji Fertilizer Company Limited 83,170,819 84,379,493",YEAR_COLUMN_VALUE_MATCH
+earnings_per_share,consolidated,2025-12-31,58.44,verified,8,2025,58.44,Earnings per share - basic and diluted (Rupees) 58.44 59.29,YEAR_COLUMN_VALUE_MATCH
+total_assets,standalone,2025-12-31,437485133,verified,3,2025,437485133,"TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722",YEAR_COLUMN_VALUE_MATCH
+total_equity_and_liabilities,standalone,2025-12-31,437485133,verified,3,2025,437485133,"TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722",YEAR_COLUMN_VALUE_MATCH
+total_assets,standalone,2024-12-31,416951722,verified,3,2024,416951722,"TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722",YEAR_COLUMN_VALUE_MATCH
+total_equity_and_liabilities,standalone,2024-12-31,416951722,verified,3,2024,416951722,"TOTAL EQUITY AND LIABILITIES 437,485,133 416,951,722 TOTAL ASSETS 437,485,133 416,951,722",YEAR_COLUMN_VALUE_MATCH
+total_assets,consolidated,2025-12-31,613298162,verified,7,2025,613298162,"TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408",YEAR_COLUMN_VALUE_MATCH
+total_equity_and_liabilities,consolidated,2025-12-31,613298162,verified,7,2025,613298162,"TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408",YEAR_COLUMN_VALUE_MATCH
+total_assets,consolidated,2024-12-31,573683408,verified,7,2024,573683408,"TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408",YEAR_COLUMN_VALUE_MATCH
+total_equity_and_liabilities,consolidated,2024-12-31,573683408,verified,7,2024,573683408,"TOTAL, EQUITY AND LIABILITIES _ 613,298,162 _ 573,683,408 TOTAL ASSETS ~ 613,298,162 573,683,408",YEAR_COLUMN_VALUE_MATCH
+net_turnover,standalone,2024-12-31,373536920,verified,4,2024,373536920,"Turnover - net 432,410,443 373,536,920",YEAR_COLUMN_VALUE_MATCH
+gross_profit,standalone,2024-12-31,127172569,verified,4,2024,127172569,"GROSS PROFIT 130,610,714 127,172,569",YEAR_COLUMN_VALUE_MATCH
+profit_after_tax,standalone,2024-12-31,64731439,verified,4,2024,64731439,"PROFIT FOR THE YEAR 73,564,267 64,731,439",YEAR_COLUMN_VALUE_MATCH
+earnings_per_share,standalone,2024-12-31,45.49,verified,4,2024,45.49,Earnings per share - basic and diluted (Rupees) 51.69 45.49,YEAR_COLUMN_VALUE_MATCH
+net_turnover,consolidated,2024-12-31,411254410,verified,8,2024,411254410,"Turnover - net 483,807,560 411,254,410",YEAR_COLUMN_VALUE_MATCH
+gross_profit,consolidated,2025-12-31,148879570,verified,8,2025,148879570,"GROSS PROFIT 148,879,570 143,745,254",YEAR_COLUMN_VALUE_MATCH
+gross_profit,consolidated,2024-12-31,143745254,verified,8,2024,143745254,"GROSS PROFIT 148,879,570 143,745,254",YEAR_COLUMN_VALUE_MATCH
+profit_after_tax,consolidated,2024-12-31,85525344,verified,8,2024,85525344,"PROFIT FOR THE YEAR 84,946,307 85,525,344",YEAR_COLUMN_VALUE_MATCH
+profit_attributable_to_parent,consolidated,2024-12-31,84379493,verified,8,2024,84379493,"Equity holders of Fauji Fertilizer Company Limited 83,170,819 84,379,493",YEAR_COLUMN_VALUE_MATCH
+earnings_per_share,consolidated,2024-12-31,59.29,verified,8,2024,59.29,Earnings per share - basic and diluted (Rupees) 58.44 59.29,YEAR_COLUMN_VALUE_MATCH
+cash_generated_from_operations,standalone,2025-12-31,93364120,ocr_unverified,6,2025,93364120,"Cash generated from operations 93,364,120 159,563,509",YEAR_COLUMN_VALUE_MATCH
+cash_generated_from_operations,standalone,2024-12-31,159563509,ocr_unverified,6,2024,159563509,"Cash generated from operations 93,364,120 159,563,509",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_operating_activities,standalone,2025-12-31,36971083,ocr_unverified,6,2025,36971083,"Net cash generated from operating activities 36,971,083 106,404,852",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_operating_activities,standalone,2024-12-31,106404852,ocr_unverified,6,2024,106404852,"Net cash generated from operating activities 36,971,083 106,404,852",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_investing_activities,standalone,2025-12-31,-2428806,ocr_unverified,6,2025,-2428806,"Net cash (used in)/ generated from investing activities (2,428,806) (11,031,754)",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_investing_activities,standalone,2024-12-31,-11031754,ocr_unverified,6,2024,-11031754,"Net cash (used in)/ generated from investing activities (2,428,806) (11,031,754)",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_financing_activities,standalone,2025-12-31,-47155954,ocr_unverified,6,2025,-47155954,"Net cash (used in) financing activities (47,155,954) (24,124,161)",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_financing_activities,standalone,2024-12-31,-24124161,ocr_unverified,6,2024,-24124161,"Net cash (used in) financing activities (47,155,954) (24,124,161)",YEAR_COLUMN_VALUE_MATCH
+net_change_in_cash_and_cash_equivalents,standalone,2025-12-31,-12613677,ocr_unverified,6,2025,-12613677,"Net (decrease) increase in cash and cash equivalents (12,613,677) 71,248,937",YEAR_COLUMN_VALUE_MATCH
+net_change_in_cash_and_cash_equivalents,standalone,2024-12-31,71248937,ocr_unverified,6,2024,71248937,"Net (decrease) increase in cash and cash equivalents (12,613,677) 71,248,937",YEAR_COLUMN_VALUE_MATCH
+cash_and_cash_equivalents_beginning,standalone,2025-12-31,176715058,ocr_unverified,6,2025,176715058,"Cash and cash equivalents at beginning of the year 176,715,058 79,766,068",YEAR_COLUMN_VALUE_MATCH
+cash_and_cash_equivalents_beginning,standalone,2024-12-31,79766068,ocr_unverified,6,2024,79766068,"Cash and cash equivalents at beginning of the year 176,715,058 79,766,068",YEAR_COLUMN_VALUE_MATCH
+effect_of_exchange_rate_changes,standalone,2025-12-31,-792384,ocr_unverified,6,2025,-792384,"Effect of exchange rate changes (792,384) (249,807)",YEAR_COLUMN_VALUE_MATCH
+effect_of_exchange_rate_changes,standalone,2024-12-31,-249807,ocr_unverified,6,2024,-249807,"Effect of exchange rate changes (792,384) (249,807)",YEAR_COLUMN_VALUE_MATCH
+cash_and_cash_equivalents_ending,standalone,2025-12-31,163308997,ocr_unverified,6,2025,163308997,"Cash and cash equivalents at end of the year 163,308,997 176,715,058",YEAR_COLUMN_VALUE_MATCH
+cash_and_cash_equivalents_ending,standalone,2024-12-31,176715058,verified,6,2024,176715058,"Cash and cash equivalents at end of the year 163,308,997 176,715,058",YEAR_COLUMN_VALUE_MATCH
+cash_and_cash_equivalents_acquired_through_merger,standalone,2024-12-31,25949860,ocr_unverified,6,2024,25949860,"Acquisition of cash and cash equivalents pursuant to merger - 25,949,860",YEAR_COLUMN_VALUE_MATCH
+cash_generated_from_operations,consolidated,2025-12-31,111479414,ocr_unverified,10,2025,111479414,"Cash generated from operations 111,479,414 183,664,281",YEAR_COLUMN_VALUE_MATCH
+cash_generated_from_operations,consolidated,2024-12-31,183664281,verified,10,2024,183664281,"Cash generated from operations 111,479,414 183,664,281",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_operating_activities,consolidated,2025-12-31,53550844,ocr_unverified,10,2025,53550844,"Net cash generated from operating activities 53,550,844 128,432,720",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_operating_activities,consolidated,2024-12-31,128432720,ocr_unverified,10,2024,128432720,"Net cash generated from operating activities 53,550,844 128,432,720",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_investing_activities,consolidated,2025-12-31,-13192148,ocr_unverified,10,2025,-13192148,"Net cash (used in) investing activities (13,192,148) (14,986,188)",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_investing_activities,consolidated,2024-12-31,-14986188,ocr_unverified,10,2024,-14986188,"Net cash (used in) investing activities (13,192,148) (14,986,188)",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_financing_activities,consolidated,2025-12-31,-48638010,ocr_unverified,10,2025,-48638010,"Net cash (used in) financing activities (48,638,010) (35,612,648)",YEAR_COLUMN_VALUE_MATCH
+net_cash_from_financing_activities,consolidated,2024-12-31,-35612648,ocr_unverified,10,2024,-35612648,"Net cash (used in) financing activities (48,638,010) (35,612,648)",YEAR_COLUMN_VALUE_MATCH
+net_change_in_cash_and_cash_equivalents,consolidated,2025-12-31,-8279314,ocr_unverified,10,2025,-8279314,"Net (decrease) / increase in cash and cash equivalents (8,279,314) 77,833,884",YEAR_COLUMN_VALUE_MATCH
+net_change_in_cash_and_cash_equivalents,consolidated,2024-12-31,77833884,ocr_unverified,10,2024,77833884,"Net (decrease) / increase in cash and cash equivalents (8,279,314) 77,833,884",YEAR_COLUMN_VALUE_MATCH
+cash_and_cash_equivalents_beginning,consolidated,2025-12-31,191619934,ocr_unverified,10,2025,191619934,"Cash and cash equivalents at beginning of the year 191,619,934 86,315,120",YEAR_COLUMN_VALUE_MATCH
+cash_and_cash_equivalents_beginning,consolidated,2024-12-31,86315120,ocr_unverified,10,2024,86315120,"Cash and cash equivalents at beginning of the year 191,619,934 86,315,120",YEAR_COLUMN_VALUE_MATCH
+effect_of_exchange_rate_changes,consolidated,2025-12-31,-854486,ocr_unverified,10,2025,-854486,"Effect of exchange rate changes (854,486) (263,891)",YEAR_COLUMN_VALUE_MATCH
+effect_of_exchange_rate_changes,consolidated,2024-12-31,-263891,ocr_unverified,10,2024,-263891,"Effect of exchange rate changes (854,486) (263,891)",YEAR_COLUMN_VALUE_MATCH
+cash_and_cash_equivalents_ending,consolidated,2025-12-31,182486134,ocr_unverified,10,2025,182486134,"Cash and cash equivalents at end of the year 182,486,134 191,619,934",YEAR_COLUMN_VALUE_MATCH
+cash_and_cash_equivalents_ending,consolidated,2024-12-31,191619934,ocr_unverified,10,2024,191619934,"Cash and cash equivalents at end of the year 182,486,134 191,619,934",YEAR_COLUMN_VALUE_MATCH
+cash_and_cash_equivalents_acquired_through_merger,consolidated,2024-12-31,27734821,ocr_unverified,10,2024,27734821,"Acquisition of cash and cash equivalents pursuant to merger - 27,734,821",YEAR_COLUMN_VALUE_MATCH

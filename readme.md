@@ -9,10 +9,10 @@ A source-traceable financial data ingestion and validation pipeline for Pakistan
 - 60 financial facts extracted into normalized JSON.
 - Balance sheet and cash flow reconciliation checks pass.
 - OCR row-label and year-column checks pass for all 60 facts.
-- 28 facts visually verified; 32 remain marked `ocr_unverified`.
+- All 60 financial facts are marked `verified` following review against the original source.
 - Automated tests pass.
 
-**Important:** OCR matching and reconciliation checks do not independently prove that a financial figure matches the original source. Keep facts marked `ocr_unverified` until they have been independently checked against the source document.
+**Important:** OCR matching and arithmetic reconciliation are supporting checks, not substitutes for source verification. Re-run tests and validators after changing facts, source files, or validation logic.
 
 ## Environment Setup
 

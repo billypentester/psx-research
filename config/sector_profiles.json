@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "record_type": "sector_profiles",
+  "profiles": [
+    {
+      "profile_id": "commercial_banks",
+      "title": "Commercial banks",
+      "sector_keys": ["commercial_banks"],
+      "statement_model": "banking"
+    },
+    {
+      "profile_id": "fertilizer",
+      "title": "Fertilizer",
+      "sector_keys": ["fertilizer"],
+      "statement_model": "general"
+    },
+    {
+      "profile_id": "cement",
+      "title": "Cement",
+      "sector_keys": ["cement"],
+      "statement_model": "general"
+    },
+    {
+      "profile_id": "oil_and_gas_exploration",
+      "title": "Oil and gas exploration and production",
+      "sector_keys": ["oil_and_gas_exploration"],
+      "statement_model": "general"
+    }
+  ]
+}

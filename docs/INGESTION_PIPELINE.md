@@ -289,6 +289,10 @@ To include a bounded public-source collection pass:
 python pipeline/run_analysis.py --company FFC --fetch-discover --validate
 ```
 
+The collection pass only fetches hosts that `config/access_policies.json`
+permits. PSX and the other catalog providers are prohibited or unclear, so it currently
+refuses every URL and the run stops. See `docs/SOURCE_POLICY.md`.
+
 Or provide explicit permitted URLs:
 
 ```bash

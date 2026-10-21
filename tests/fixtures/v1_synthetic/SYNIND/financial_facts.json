@@ -1,0 +1,12 @@
+{
+  "company_id": "SYNIND",
+  "currency": "PKR",
+  "facts": [
+    {"metric": "net_sales", "scope": "standalone", "period_end": "2025-09-30", "period_type": "quarterly", "value": 18250000000, "unit": "PKR", "source_id": "src_synind2025q3", "source_page": "Condensed interim profit or loss, page 3", "verification_status": "verified", "fact_classification": "reported", "company_id": "SYNIND"},
+    {"metric": "net_sales", "scope": "standalone", "period_end": "2025-09-30", "period_type": "year_to_date", "value": 51900000000, "unit": "PKR", "source_id": "src_synind2025q3", "source_page": "Condensed interim profit or loss, page 3", "verification_status": "verified", "fact_classification": "reported", "company_id": "SYNIND"},
+    {"metric": "cost_of_sales", "scope": "standalone", "period_end": "2025-09-30", "period_type": "quarterly", "value": -14100000000, "unit": "PKR", "source_id": "src_synind2025q3", "source_page": "Condensed interim profit or loss, page 3", "verification_status": "ocr_unverified", "fact_classification": "reported", "company_id": "SYNIND"},
+    {"metric": "gross_profit", "scope": "standalone", "period_end": "2025-09-30", "period_type": "quarterly", "value": 4150000000, "unit": "PKR", "source_id": "src_synind2025q3", "source_page": "Condensed interim profit or loss, page 3", "verification_status": "needs_final_review", "fact_classification": "calculated", "company_id": "SYNIND"},
+    {"metric": "finance_cost", "scope": "standalone", "period_end": "2025-09-30", "period_type": "quarterly", "value": -612500000.5, "unit": "PKR", "source_id": "src_synind2025q3", "source_page": "Condensed interim profit or loss, page 3", "verification_status": "verified", "fact_classification": "reported", "company_id": "SYNIND"},
+    {"metric": "earnings_per_share", "scope": "standalone", "period_end": "2025-09-30", "period_type": "quarterly", "value": 4.5, "unit": "PKR_per_share", "source_id": "src_synind2025q3", "source_page": "Condensed interim profit or loss, page 3", "verification_status": "estimated", "fact_classification": "management_provided", "company_id": "SYNIND"}
+  ]
+}

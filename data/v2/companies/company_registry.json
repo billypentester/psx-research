@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "record_type": "company_registry",
+  "companies": [
+    {
+      "schema_version": 1,
+      "company_id": "FFC",
+      "legal_name": "Fauji Fertilizer Company Limited",
+      "listing_status": null,
+      "delisted_on": null,
+      "symbols": [
+        {
+          "symbol": "FFC",
+          "valid_from": null,
+          "valid_to": null
+        }
+      ],
+      "identity": {
+        "state": "unverified",
+        "evidence": [
+          {
+            "description": "clm_2d07ce7ef45ba4ea: cover letter dated January 29, 2026, reference line; committed OCR text data/normalized/FFC/ffc_report_ocr.txt line 4",
+            "source_id": "src_e4abb64ff4886ffc",
+            "url": null
+          },
+          {
+            "description": "clm_2d07ce7ef45ba4ea: cover letter letterhead/footer; committed OCR text data/normalized/FFC/ffc_report_ocr.txt line 48",
+            "source_id": "src_e4abb64ff4886ffc",
+            "url": null
+          },
+          {
+            "description": "clm_2d07ce7ef45ba4ea: Annexure A page 6, consolidated profit attribution; committed OCR text data/normalized/FFC/ffc_report_ocr.txt line 621",
+            "source_id": "src_e4abb64ff4886ffc",
+            "url": null
+          }
+        ],
+        "verified_by": null,
+        "verified_at": null
+      },
+      "classification": null
+    }
+  ]
+}

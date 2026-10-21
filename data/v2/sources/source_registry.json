@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "record_type": "source_registry",
+  "sources": [
+    {
+      "schema_version": 2,
+      "source_id": "src_e4abb64ff4886ffc",
+      "company_id": "FFC",
+      "source_type": "announcement",
+      "title": "FFC Financial Results for Year Ended 31 December 2025 — PSX Filing",
+      "canonical_url": "https://dps.psx.com.pk/download/document/269389.pdf",
+      "publisher": null,
+      "published_at": null,
+      "retrieved_at": null,
+      "registered_at": "2026-10-17T19:05:55.212347+00:00",
+      "local_path": "data/raw/FFC/ffc_report.pdf",
+      "sha256": "a8962695859abc2e27bb780b0919a533f8e7dc6ae0652818d0735ce94cb41e2e",
+      "page_number": null,
+      "notes": "10-page scanned PSX filing containing the FY2025 financial results announcement and attached financial statements. Not the full annual report. OCR output requires verification against the original pages.",
+      "provider": null,
+      "retrieval_method": null,
+      "http_status": null,
+      "content_type": null,
+      "access_basis": null,
+      "upstream": null
+    }
+  ],
+  "lineage": {
+    "migration": "v1_to_v2",
+    "from_schema_version": 1,
+    "from_path": "data/source_registry.json",
+    "from_sha256": "2815821312a340a3e1ebb06eb65d19f6147672164870dd1294cb0f686edf5164",
+    "migrated_at": "2026-10-21T19:17:25.295945+00:00"
+  }
+}

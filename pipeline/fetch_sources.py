@@ -1,8 +1,12 @@
 """Fetch permitted public source pages and preserve them with provenance.
 
-This collector intentionally fetches only explicit URLs or links discovered
-from configured public landing pages. It does not bypass authentication,
-robots rules, rate limits, or anti-bot controls.
+Every request, including discovered links and redirects, goes through
+`finura.sources.fetch.Fetcher`. The fetcher refuses any host without a
+reviewed policy in `config/access_policies.json` that permits automated
+access, before making a network request. PSX hosts (psx.com.pk and all
+subdomains) are recorded as prohibited, so PSX content must be downloaded
+manually and registered with `pipeline/register_source.py`. robots.txt is
+never treated as permission.
 """
 
 import argparse
@@ -13,9 +17,10 @@ import sys
 import time
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlparse
-from urllib.request import Request, urlopen
+
+from finura.sources.access import AccessNotPermittedError, load_access_policies
+from finura.sources.fetch import FetchError, Fetcher
 
 try:
     from .register_source import register_file
@@ -25,9 +30,14 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "data" / "source_catalog.json"
-USER_AGENT = "psx-research/0.1 (+local research collector)"
+ACCESS_POLICIES = ROOT / "config" / "access_policies.json"
 MAX_BYTES = 25 * 1024 * 1024
 ALLOWED_SCHEMES = {"http", "https"}
+REFUSAL_GUIDANCE = (
+    "Automated access requires a reviewed policy in config/access_policies.json that permits it. "
+    "Download the document manually and register it with pipeline/register_source.py, "
+    "or record written permission from the publisher."
+)
 
 
 class LinkParser(HTMLParser):
@@ -64,15 +74,16 @@ def safe_name(url):
     return f"{digest}_{name}"
 
 
-def fetch(url):
+def build_fetcher(policies_path=ACCESS_POLICIES, transport=None):
+    options = {"transport": transport} if transport is not None else {}
+    return Fetcher(policies=load_access_policies(policies_path), max_bytes=MAX_BYTES, **options)
+
+
+def fetch(url, fetcher):
     if urlparse(url).scheme not in ALLOWED_SCHEMES:
         raise ValueError(f"Unsupported URL scheme: {url}")
-    request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "*/*"})
-    with urlopen(request, timeout=30) as response:
-        content = response.read(MAX_BYTES + 1)
-        if len(content) > MAX_BYTES:
-            raise ValueError(f"Response exceeds {MAX_BYTES} bytes: {url}")
-        return response.status, response.headers.get("Content-Type"), content
+    artifact = fetcher.fetch(url)
+    return artifact.status, artifact.content_type, artifact.body
 
 
 def save_response(company, url, status, content_type, content):
@@ -99,8 +110,8 @@ def save_response(company, url, status, content_type, content):
     return path, record
 
 
-def discover(url, company):
-    status, content_type, content = fetch(url)
+def discover(url, company, fetcher):
+    status, content_type, content = fetch(url, fetcher)
     if not content_type or "html" not in content_type.lower():
         return [(url, status, content_type, content)]
     parser = LinkParser()
@@ -115,7 +126,11 @@ def discover(url, company):
             links.append(absolute)
     responses = [(url, status, content_type, content)]
     for link in sorted(set(links)):
-        link_status, link_type, link_content = fetch(link)
+        try:
+            link_status, link_type, link_content = fetch(link, fetcher)
+        except AccessNotPermittedError as error:
+            print(f"REFUSED: {link}: {error}", file=sys.stderr)
+            continue
         responses.append((link, link_status, link_type, link_content))
     return responses
 
@@ -137,8 +152,10 @@ def main():
     if not urls:
         parser.error("Provide --url or --discover.")
 
+    fetcher = build_fetcher()
     successes = 0
     failures = 0
+    refused = 0
     seen = set()
     for url in urls:
         if url in seen:
@@ -146,20 +163,23 @@ def main():
         seen.add(url)
         try:
             discovered = (
-                discover(url, args.company)
+                discover(url, args.company, fetcher)
                 if args.discover
-                else [(url, *fetch(url))]
+                else [(url, *fetch(url, fetcher))]
             )
             for item in discovered:
                 item_url, status, content_type, content = item
                 save_response(args.company, item_url, status, content_type, content)
                 successes += 1
                 time.sleep(args.delay)
-        except (HTTPError, URLError, OSError, ValueError) as error:
+        except AccessNotPermittedError as error:
+            refused += 1
+            print(f"REFUSED: {url}: {error}. {REFUSAL_GUIDANCE}", file=sys.stderr)
+        except (FetchError, OSError, ValueError) as error:
             failures += 1
             print(f"ERROR: {url}: {error}", file=sys.stderr)
-    print(f"Fetched: {successes}; failures: {failures}")
-    return 1 if failures and not successes else 0
+    print(f"Fetched: {successes}; failures: {failures}; refused: {refused}")
+    return 1 if (failures or refused) and not successes else 0
 
 
 if __name__ == "__main__":

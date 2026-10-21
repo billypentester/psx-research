@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "record_type": "accounting_rules",
+  "rules": [
+    {
+      "rule_id": "balance_sheet_assets_equal_equity_and_liabilities",
+      "description": "Total assets equal total equity and liabilities (general statement layout). Generalises pipeline/validate/check_reconciliations.py.",
+      "statement_models": ["general"],
+      "total": "total_equity_and_liabilities",
+      "components": [
+        {"concept": "total_assets", "coefficient": 1}
+      ]
+    },
+    {
+      "rule_id": "balance_sheet_assets_equal_liabilities_and_net_assets",
+      "description": "Total assets equal total liabilities plus net assets (banking statement layout).",
+      "statement_models": ["banking"],
+      "total": "total_assets",
+      "components": [
+        {"concept": "total_liabilities", "coefficient": 1},
+        {"concept": "net_assets", "coefficient": 1}
+      ]
+    },
+    {
+      "rule_id": "cash_flow_activities_sum_to_net_change",
+      "description": "Operating, investing, and financing cash flows sum to the net change in cash and cash equivalents. Outflows are stored as negative amounts. Generalises the first check in pipeline/validate/check_cash_flows.py.",
+      "statement_models": ["general"],
+      "total": "net_change_in_cash_and_cash_equivalents",
+      "components": [
+        {"concept": "net_cash_from_operating_activities", "coefficient": 1},
+        {"concept": "net_cash_from_investing_activities", "coefficient": 1},
+        {"concept": "net_cash_from_financing_activities", "coefficient": 1}
+      ]
+    },
+    {
+      "rule_id": "cash_roll_forward",
+      "description": "Opening cash plus the net change, exchange-rate effects, and cash acquired through a merger equals closing cash. Generalises the second check in pipeline/validate/check_cash_flows.py.",
+      "statement_models": ["general"],
+      "total": "cash_and_cash_equivalents_ending",
+      "components": [
+        {"concept": "cash_and_cash_equivalents_beginning", "coefficient": 1},
+        {"concept": "net_change_in_cash_and_cash_equivalents", "coefficient": 1},
+        {"concept": "effect_of_exchange_rate_changes", "coefficient": 1},
+        {
+          "concept": "cash_and_cash_equivalents_acquired_through_merger",
+          "coefficient": 1,
+          "optional": true,
+          "assumption_when_absent": "No merger-cash fact was recorded for this period, so it is taken as nil. Filings show this reconciling line only when a merger occurred (FFC FY2025 shows a dash). Confirm against the source before relying on the result."
+        }
+      ]
+    },
+    {
+      "rule_id": "gross_profit_subtotal",
+      "description": "Net sales plus cost of sales (stored negative) equal gross profit.",
+      "statement_models": ["general"],
+      "total": "gross_profit",
+      "components": [
+        {"concept": "net_sales", "coefficient": 1},
+        {"concept": "cost_of_sales", "coefficient": 1}
+      ]
+    },
+    {
+      "rule_id": "net_markup_interest_income_subtotal",
+      "description": "Mark-up/return/interest earned plus mark-up/return/interest expensed (stored negative) equal net mark-up/interest income (banking layout).",
+      "statement_models": ["banking"],
+      "total": "net_markup_interest_income",
+      "components": [
+        {"concept": "markup_return_interest_earned", "coefficient": 1},
+        {"concept": "markup_return_interest_expensed", "coefficient": 1}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "manifest_version": 1,
+  "migration": "v1_to_v2",
+  "finura_version": "0.1.0",
+  "executed_at": "2026-10-21T19:17:25.295945+00:00",
+  "status": "succeeded",
+  "company_id": "FFC",
+  "inputs": [
+    {
+      "role": "v1_financial_facts",
+      "path": "data/normalized/FFC/financial_facts.json",
+      "sha256": "642a4d4c9c9fcb19af7f40151299e540d554c47bf981c447f2957c3172b28003",
+      "schema_version": 1,
+      "record_count": 60
+    },
+    {
+      "role": "v1_source_registry",
+      "path": "data/source_registry.json",
+      "sha256": "2815821312a340a3e1ebb06eb65d19f6147672164870dd1294cb0f686edf5164",
+      "schema_version": 1,
+      "record_count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "role": "v2_financial_facts",
+      "path": "data/v2/facts/FFC/financial_facts.json",
+      "sha256": "01c5709e033b140b8e5e586e7590f92f6927442f90c4268304faf16dd8ecd86c",
+      "schema_version": 2,
+      "record_count": 60
+    },
+    {
+      "role": "v2_source_registry",
+      "path": "data/v2/sources/source_registry.json",
+      "sha256": "23a30d38f2475b2d89868850f2981cf7d22cff8778c5ac6a4003b00f22e3a825",
+      "schema_version": 2,
+      "record_count": 1
+    }
+  ],
+  "backups": [],
+  "validation": {
+    "v2_schema_valid": true,
+    "fact_identities_unique": true,
+    "source_links_resolved": 60,
+    "source_links_same_company": 60,
+    "company_identity": "not_checked",
+    "raw_evidence": "checked",
+    "evidence_checks": [
+      {
+        "source_id": "src_e4abb64ff4886ffc",
+        "local_path": "data/raw/FFC/ffc_report.pdf",
+        "result": "sha256_match"
+      }
+    ]
+  },
+  "fact_equivalence": {
+    "records_compared": 60,
+    "fields_compared": [
+      "metric->concept",
+      "value->value",
+      "unit->unit",
+      "period_end->period.end",
+      "period_type->period.type",
+      "scope->scope",
+      "source_id->source_id",
+      "source_page->source_location",
+      "verification_status->verification_status",
+      "fact_classification->classification",
+      "company_id(file)->company_id",
+      "currency(file)->currency"
+    ],
+    "unknown_fields_confirmed_absent": [
+      "period.start",
+      "verified_by",
+      "verified_at",
+      "verification_evidence",
+      "extraction_method",
+      "extracted_at"
+    ],
+    "mismatches": []
+  },
+  "source_equivalence": {
+    "records_compared": 1,
+    "fields_compared": [
+      "source_id->source_id",
+      "company_id->company_id",
+      "source_type->source_type",
+      "title->title",
+      "published_at->published_at",
+      "local_path->local_path",
+      "sha256->sha256",
+      "page_number->page_number",
+      "notes->notes",
+      "provider->provider",
+      "retrieval_method->retrieval_method",
+      "http_status->http_status",
+      "content_type->content_type",
+      "url->canonical_url",
+      "retrieved_at->registered_at"
+    ],
+    "unknown_fields_confirmed_absent": [
+      "retrieved_at",
+      "publisher",
+      "access_basis",
+      "upstream"
+    ],
+    "mismatches": []
+  },
+  "source_timestamps_text_identical": 1,
+  "verification_status_counts_v1": {
+    "verified": 60
+  },
+  "verification_status_counts_v2": {
+    "verified": 60
+  },
+  "fact_provenance_gaps": {
+    "period.start": 60,
+    "extraction_method": 60,
+    "extracted_at": 60,
+    "verified_by": 60,
+    "verified_at": 60,
+    "verification_evidence": 60
+  },
+  "source_provenance_gaps": {
+    "publisher": 1,
+    "published_at": 1,
+    "retrieved_at": 1,
+    "provider": 1,
+    "retrieval_method": 1,
+    "access_basis": 1,
+    "upstream": 1
+  },
+  "inputs_unchanged": true
+}

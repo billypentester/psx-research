@@ -1,0 +1,45 @@
+[
+  {
+    "source_id": "src_synbank2025annual",
+    "company_id": "SYNBANK",
+    "source_type": "annual_report",
+    "title": "SYNTHETIC Synthetic Bank Limited Annual Report 2025",
+    "url": "https://example.com/synthetic/synbank-annual-2025.pdf",
+    "published_at": "2026-02-20",
+    "retrieved_at": "2026-03-01T09:30:00+05:00",
+    "local_path": "raw/SYNBANK/annual_2025.txt",
+    "sha256": "c45d23c7631c57923dc0f4b5efa3986f3a9e4cb4aa1b95d0b4c63e9a3eb7a47d",
+    "page_number": null,
+    "notes": "Synthetic fixture; not real financial data.",
+    "provider": "Synthetic",
+    "retrieval_method": "http",
+    "http_status": 200,
+    "content_type": "text/plain"
+  },
+  {
+    "source_id": "src_synind2025q3",
+    "company_id": "SYNIND",
+    "source_type": "quarterly_report",
+    "title": "SYNTHETIC Synthetic Industries Limited Q3 2025 Report",
+    "url": null,
+    "published_at": null,
+    "retrieved_at": "2025-10-30T12:00:00+00:00",
+    "local_path": "raw/SYNIND/q3_2025.txt",
+    "sha256": "b620ab4ad997628c0afd9b7a4c5826ad38f31e841db0babdbb2aa64d6da2e10f",
+    "page_number": 3,
+    "notes": null
+  },
+  {
+    "source_id": "src_synold2022final",
+    "company_id": "SYNOLD",
+    "source_type": "other",
+    "title": "SYNTHETIC Synthetic Old Company Final Report",
+    "url": null,
+    "published_at": null,
+    "retrieved_at": "2023-01-15T08:00:00+00:00",
+    "local_path": "raw/SYNOLD/final_2022.txt",
+    "sha256": "1a4d7a9f21febe00daa633fee64e58564bb351aaceefd54ae62885e34bc2acfd",
+    "page_number": null,
+    "notes": null
+  }
+]

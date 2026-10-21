@@ -1,0 +1,6 @@
+symbol,as_of,legal_name,listing_status,sector_label,valid_from,valid_to,previous_symbol,source_id,location,excerpt
+SYNI,2024-06-15,Synthetic Industries Limited,listed,CEMENT,2010-03-01,,,src_synlisting2024,page 3 row 12,SYNI  Synthetic Industries Limited  CEMENT
+SYNIND,2024-06-20,Synthetic Industries Limited,,,2024-07-01,,SYNI,src_synrename,page 1 para 1,symbol SYNI shall be changed to SYNIND w.e.f. July 01 2024
+SYNIND,2024-06-20,Synthetic Industries Limited,,,2024-07-01,,SYNI,src_synlisting2024,page 3 footnote,SYNI (to be renamed SYNIND)
+SYNO,2023-06-01,Synthetic Old Company Limited,delisted,,2023-06-30,,,src_syndelist,page 2 row 4,Synthetic Old Company Limited delisted w.e.f. 30-06-2023
+SYNO,2024-06-15,Synthetic New Company Limited,listed,TEXTILE,2024-01-01,,,src_synlisting2024,page 5 row 2,SYNO  Synthetic New Company Limited  TEXTILE

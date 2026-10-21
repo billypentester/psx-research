@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "record_type": "source_registry",
+  "sources": [
+    {
+      "source_id": "src_synlisting2024",
+      "company_id": null,
+      "source_type": "other",
+      "title": "SYNTHETIC exchange listed-companies printout, June 2024",
+      "canonical_url": "https://example.com/synthetic/listed-companies",
+      "publisher": "Synthetic Exchange",
+      "published_at": null,
+      "retrieved_at": "2024-06-15T09:00:00+05:00",
+      "registered_at": "2026-10-21T10:00:00+00:00",
+      "local_path": "raw/exchange/listed-companies-2024-06-15.pdf",
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "access_basis": "manual_download",
+      "upstream": []
+    },
+    {
+      "source_id": "src_synrename",
+      "company_id": null,
+      "source_type": "announcement",
+      "title": "SYNTHETIC notice: change of symbol SYNI to SYNIND",
+      "canonical_url": "https://example.com/synthetic/notices/rename.pdf",
+      "publisher": "Synthetic Exchange",
+      "published_at": "2024-06-20",
+      "retrieved_at": null,
+      "registered_at": "2026-10-21T10:00:00+00:00",
+      "local_path": "raw/exchange/notice-rename.pdf",
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "access_basis": "manual_download",
+      "upstream": []
+    },
+    {
+      "source_id": "src_syndelist",
+      "company_id": null,
+      "source_type": "announcement",
+      "title": "SYNTHETIC delisting report",
+      "registered_at": "2026-10-21T10:00:00+00:00",
+      "local_path": "raw/exchange/delisting-report.pdf",
+      "sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+    }
+  ]
+}

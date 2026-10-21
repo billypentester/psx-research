@@ -209,6 +209,148 @@ scope, period, units, signs, or restatement context.
 their exact assumptions are described in
 [INGESTION_PIPELINE.md](./INGESTION_PIPELINE.md).
 
+## Canonical v2 schema (`finura.schemas`)
+
+The `finura` package defines canonical Pydantic models with an explicit
+`schema_version` of `2`. The data files above are still v1; the package reads
+them through read-only loaders and does not rewrite them. Migrating stored
+files to v2 is a separate, reviewed step.
+
+```python
+from pathlib import Path
+from finura.schemas import load_v1_financial_facts, load_v1_source_registry
+
+facts = load_v1_financial_facts(Path("data/normalized/FFC/financial_facts.json"))
+registry = load_v1_source_registry(Path("data/source_registry.json"))
+facts.facts[0].provenance_gaps  # fields v1 never recorded
+```
+
+Each loader returns the strict v1 mirror records and the mapped v2 models
+side by side, so the mapping can be checked field by field.
+
+### Validation rules
+
+- Values must be finite JSON numbers; booleans, NaN, infinity, and numeric
+  strings are rejected. Integers stay integers and floats stay floats.
+- Dates must be `YYYY-MM-DD` strings; timestamps must carry a UTC offset.
+- Enum values are exact and case-sensitive; unknown values are rejected.
+- Unknown fields are rejected, not dropped. Repeated JSON object keys are
+  rejected instead of keeping the last value.
+- A fact's `currency` must match the currency of its `unit`.
+- Duplicate fact identities and duplicate `source_id`s are rejected.
+- A fact cannot be classified or reviewed as `missing`: a missing figure is a
+  data gap, not a number. (v1 accepted these values; no v1 record uses them.)
+- `verified_by`, `verified_at`, and `verification_evidence` are allowed only
+  on `verified` facts; `extracted_at` requires an `extraction_method`.
+- A source's `local_path` must be relative, use `/`, and not contain `..`.
+- Timestamps are written with `isoformat()`, so `+00:00` is not rewritten
+  as `Z`.
+
+### Source fields added before first persistence (Phase 3, step 1)
+
+`SourceDocument` v2 was finalised before any v2 file was stored. `url` is
+now `canonical_url`, `company_id` may be `null` for exchange-wide documents,
+and `publisher`, `access_basis`, and `upstream` were added. Field meanings
+are in [SOURCES_AND_CLAIMS.md](./SOURCES_AND_CLAIMS.md).
+
+### v2 file documents
+
+| `record_type` | Model | Contents |
+| --- | --- | --- |
+| `financial_facts` | `FinancialFactsDocument` | One company's facts; every fact's `company_id` must equal the document's |
+| `source_registry` | `SourceRegistryDocument` | All registered sources; `source_id` unique |
+
+Both carry `schema_version: 2` and, when produced by a migration, a
+`lineage` block (`from_path`, `from_sha256`, `migrated_at`). Unknown
+provenance is written as an explicit `null`.
+
+### Migrating v1 files
+
+```bash
+uv run python -m finura.migrations.v1_to_v2 \
+  --facts data/normalized/<COMPANY>/financial_facts.json \
+  --registry data/source_registry.json \
+  --facts-out <new path> --registry-out <new path> --manifest-out <new path> \
+  --evidence-root . \
+  [--company-registry <companies.json>] [--backup-dir <dir>]
+```
+
+The migration is company-independent; every path is explicit. It aborts,
+writing nothing, if:
+
+- either input fails strict v1 or v2 validation;
+- a fact cites an unregistered source, or a source registered to another
+  company;
+- a raw evidence file is missing or fails its SHA-256 check (when
+  `--evidence-root` is given);
+- the company is absent from the company registry (when given);
+- the re-parsed output differs from the v1 input in any mapped field, or an
+  unrecorded field is set;
+- an output path is an input path;
+- an output exists and no backup directory was given.
+
+On success it writes the two v2 documents and a manifest recording input and
+output paths, hashes, schema versions, and record counts; backups taken; each
+validation result; field-equivalence results; verification-status counts
+before and after; and per-field provenance-gap counts. Inputs are re-hashed
+before writing to confirm they did not change.
+
+The v2 fact identity is
+`company_id + concept + scope + period.end + period.type + unit`: the v1
+key plus `company_id`, because v2 facts carry their company individually.
+
+### v1 to v2 mapping: source registry
+
+| v1 field | v2 `SourceDocument` field | Rule |
+| --- | --- | --- |
+| `source_id`, `company_id`, `title`, `local_path`, `sha256`, `page_number`, `notes` | same name | copied |
+| `url` | `canonical_url` | renamed |
+| — | `publisher`, `access_basis`, `upstream` | `None`: not recorded in v1 |
+| `source_type` | `source_type` | copied; enum |
+| `published_at` | `published_at` | copied; `null` stays `None` |
+| `retrieved_at` | `registered_at` | renamed: `register_source.py` stamps registration time |
+| — | `retrieved_at` | `None`: download time was not recorded |
+| `provider`, `retrieval_method`, `http_status`, `content_type` | same name | copied when present, otherwise `None` |
+
+### v1 to v2 mapping: financial facts
+
+| v1 field | v2 `FinancialFact` field | Rule |
+| --- | --- | --- |
+| file `company_id` | `company_id` | inherited from the file header |
+| fact `company_id` (written by `normalize_external.py`) | `company_id` | must equal the file header |
+| file `currency` | `currency` | inherited; must match the unit |
+| `metric` | `concept` | renamed |
+| `value` | `value` | copied; numeric type preserved |
+| `unit` | `unit` | copied; enum |
+| `period_end`, `period_type` | `period.end`, `period.type` | copied |
+| — | `period.start` | `None`: not recorded |
+| `scope` | `scope` | copied; enum |
+| `source_id` | `source_id` | copied |
+| `source_page` | `source_location` | renamed |
+| `verification_status` | `verification_status` | copied; enum |
+| `fact_classification` | `classification` | renamed; enum |
+| — | `verified_by`, `verified_at`, `verification_evidence` | `None`: not recorded in v1 |
+| — | `extraction_method`, `extracted_at` | `None`: not recorded in v1 |
+
+No v2 field is inferred from file content. `provenance_gaps` lists every
+provenance field that is `None`; verification fields count as gaps only for
+`verified` facts.
+
+### New v2 vocabulary
+
+- `fact_classification` adds `assumed`, which the Finura specification
+  requires and no v1 record uses.
+- `period.type` adds `quarterly` and `year_to_date`; v1 data contains only
+  `annual`.
+- `extraction_method` is new: `ocr`, `structured_import`,
+  `manual_transcription`.
+
+## Validation reports and accounting rules
+
+`config/accounting_rules.json` (`record_type: accounting_rules`, schema
+version 1) and the validation report (`record_type: validation_report`,
+schema version 1) are documented in [VALIDATION.md](./VALIDATION.md).
+
 ## Safe schema evolution
 
 When extending the schema:

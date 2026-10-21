@@ -130,44 +130,49 @@ The validator does not accept `pending` or `rejected`.
 
 ## Configured public-source acquisition
 
-The repository includes `data/source_catalog.json` and
-`pipeline/fetch_sources.py` for collecting permitted public responses from:
+`data/source_catalog.json` lists providers of interest: PSX, Sarmaya, PSX
+Terminal, Ticker Analysts, SCS Trade, and FinHisaab. Listing a provider in
+the catalog does **not** permit fetching it.
 
-- PSX
-- Sarmaya
-- PSX Terminal
-- Ticker Analysts
-- SCS Trade
-- FinHisaab
+`pipeline/fetch_sources.py` fetches only hosts whose reviewed policy in
+`config/access_policies.json` permits automated access. Every request is
+checked before any network contact: explicit URLs, discovered links, and each
+redirect destination. Hosts with no policy are refused. robots.txt is never
+treated as permission.
 
-Use explicit URLs when possible:
+Current policies:
+
+- **PSX** (`psx.com.pk` and every subdomain, including `www.` and `dps.`):
+  automated access is **prohibited** by PSX's terms of use. Download PSX
+  documents manually, one copy as the terms allow, and register them with
+  `pipeline/register_source.py`, which works offline.
+- **Sarmaaya, PSX Terminal**: prohibited by their terms. **Ticker Analysts,
+  SCS Trade, FinHisaab**: unclear (no applicable or readable terms). All are
+  refused. Details and evidence: [PROVIDER_DUE_DILIGENCE.md](./PROVIDER_DUE_DILIGENCE.md).
+
+So `--discover` currently fetches nothing and exits non-zero, listing each
+refused URL. The collector needs the project environment (`uv run`), because
+it uses `finura.sources.fetch`:
 
 ```bash
-python pipeline/fetch_sources.py --company FFC \
-  --url "https://example.com/public/ffc-report.pdf"
+uv run python pipeline/fetch_sources.py --company FFC --url "<permitted URL>"
+uv run python pipeline/fetch_sources.py --company FFC --discover --delay 2
 ```
 
-For a bounded landing-page discovery pass:
+For permitted hosts, the collector:
 
-```bash
-python pipeline/fetch_sources.py --company FFC --discover --delay 2
-```
-
-The collector:
-
-- uses a descriptive user agent and a small request rate;
+- uses a descriptive user agent, per-host pacing, a 30-second timeout, and
+  bounded retries;
 - limits individual responses to 25 MiB;
 - preserves every response under `data/raw/<COMPANY>/external/<PROVIDER>/`;
-- registers the response in `data/source_registry.json`;
-- records provider, HTTP status, content type, retrieval method, URL, and hash;
-- continues when one configured provider fails.
+- registers it in `data/source_registry.json`, recording provider, HTTP
+  status, content type, retrieval method, URL, and hash;
+- continues when one URL fails or is refused.
 
-Discovery is deliberately shallow: it fetches configured landing pages and
-keeps links containing the requested company identifier. It is not a promise
-that a provider exposes company data on its homepage. Provider-specific
-endpoints, APIs, login flows, and terms must be configured only after they are
-confirmed to be public and permitted. Raw responses are not normalized facts;
-they require extraction, source review, and conflict handling.
+To enable a provider, review its terms and add a policy with quoted clauses
+(see [SOURCES_AND_CLAIMS.md](./SOURCES_AND_CLAIMS.md)). Raw responses are
+not normalized facts; they require extraction, source review, and conflict
+handling.
 
 ## Access, licensing, and responsible use
 

@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record_type": "access_policies",
+  "policies": [
+    {
+      "policy_id": "psx",
+      "publisher": "Pakistan Stock Exchange Limited",
+      "domains": [
+        "psx.com.pk"
+      ],
+      "automated_access": "prohibited",
+      "reviewed_by": "Claude Code session on behalf of the repository owner; owner confirmation pending",
+      "reviewed_at": "2026-10-21T19:30:00+00:00",
+      "clauses": [
+        {
+          "terms_url": "https://www.psx.com.pk/psx/terms-of-use",
+          "quote": "engines, software, spiders, robots, avatars, agents, tools"
+        },
+        {
+          "terms_url": "https://www.psx.com.pk/psx/terms-of-use",
+          "quote": "systematic retrieval to create collections, compilations, databases or directories"
+        },
+        {
+          "terms_url": "https://www.psx.com.pk/psx/terms-of-use",
+          "quote": "for your personal, non-commercial use only"
+        },
+        {
+          "terms_url": "https://www.psx.com.pk/psx/terms-of-use",
+          "quote": "You may print or download a single, unaltered, permanent copy"
+        },
+        {
+          "terms_url": "https://dps.psx.com.pk/listings",
+          "quote": "You will not use any Web browsers (other than generally available third-party browsers)"
+        },
+        {
+          "terms_url": "https://dps.psx.com.pk/listings",
+          "quote": "without acquiring respective rights/license from the PSX is strictly prohibited."
+        }
+      ],
+      "notes": "Covers psx.com.pk and every subdomain (including www. and dps.). Automated listing retrieval needs prior written permission or a data licence from PSX. Manual single downloads of notices for personal research are the only permitted path recorded here. dps.psx.com.pk returned 404 for robots.txt; www.psx.com.pk robots.txt disallows only /cgi-bin/. Robots rules do not override the terms. The quotes were captured through a page-to-text tool on 2026-10-21 and must be confirmed against the live terms pages."
+    },
+    {
+      "policy_id": "sarmaaya",
+      "publisher": "Sarmaaya Financials Private Limited",
+      "domains": [
+        "sarmaaya.pk"
+      ],
+      "automated_access": "prohibited",
+      "reviewed_by": "Claude Code session on behalf of the repository owner; owner confirmation pending",
+      "reviewed_at": "2026-10-21T20:00:00+00:00",
+      "clauses": [
+        {
+          "terms_url": "https://sarmaaya.pk/terms-of-service",
+          "quote": "Use bots, automated systems, or scraping techniques to extract data."
+        },
+        {
+          "terms_url": "https://sarmaaya.pk/terms-of-service",
+          "quote": "Use any automated tools (bots, scrapers, etc.) to collect or extract data from the Website."
+        },
+        {
+          "terms_url": "https://sarmaaya.pk/terms-of-service",
+          "quote": "Copy, reproduce, distribute, transmit, modify, or create derivative works based on"
+        },
+        {
+          "terms_url": "https://sarmaaya.pk/terms-of-service",
+          "quote": "access or use any of the services and information made available, to develop competitive products or services"
+        }
+      ],
+      "notes": "Master User Agreement, no effective date shown. Data is stated to come from a PSX authorised data redistributor (CS Solutions (Pvt.) Ltd.) and other third parties, so it is not independent of PSX. No API or data licence is offered; the permissions contact in clause 9.2 is an unfilled placeholder. Quotes were captured through a page-to-text tool on 2026-10-21 and must be confirmed against the live page."
+    },
+    {
+      "policy_id": "psx_terminal",
+      "publisher": "Runtime Technologies (SMC-Private) Limited",
+      "domains": [
+        "psxterminal.com"
+      ],
+      "automated_access": "prohibited",
+      "reviewed_by": "Claude Code session on behalf of the repository owner; owner confirmation pending",
+      "reviewed_at": "2026-10-21T20:00:00+00:00",
+      "clauses": [
+        {
+          "terms_url": "https://psxterminal.com/terms",
+          "quote": "scrape or resell its data at scale without permission"
+        },
+        {
+          "terms_url": "https://psxterminal.com/terms",
+          "quote": "access it through automated means beyond normal use"
+        }
+      ],
+      "notes": "Terms of Service last updated July 2026. Automated access beyond normal use needs permission; the terms publish no API, API keys, rate limits, licence, or attribution rules. A GitHub repository advertising a psxterminal.com REST/WebSocket API (github.com/mumtazkahn/psx-terminal) returned 404 on 2026-10-21. Data is 'built from publicly available market data and company filings', i.e. derived from PSX, and the operator states it is not affiliated with PSX. Permission contact: contact@psxterminal.com. Quotes were captured through a page-to-text tool on 2026-10-21 and must be confirmed against the live page."
+    },
+    {
+      "policy_id": "ticker_analysts",
+      "publisher": "Ticker Analysts (operator not identified)",
+      "domains": [
+        "tickeranalysts.com"
+      ],
+      "automated_access": "unclear",
+      "reviewed_by": "Claude Code session on behalf of the repository owner; owner confirmation pending",
+      "reviewed_at": "2026-10-21T20:00:00+00:00",
+      "notes": "The tickeranalysts.com home page footer links to no terms, privacy, or licence page and names no operating company; the site says it is 'Powered by Nafa'. Without published terms or an identified operator there is no basis for any use beyond reading the site. Needed: the operator's identity and written terms or permission covering automated access and research use."
+    },
+    {
+      "policy_id": "scs_trade",
+      "publisher": "Standard Capital Securities (Pvt.) Ltd",
+      "domains": [
+        "scstrade.com"
+      ],
+      "automated_access": "unclear",
+      "reviewed_by": "Claude Code session on behalf of the repository owner; owner confirmation pending",
+      "reviewed_at": "2026-10-21T20:00:00+00:00",
+      "clauses": [
+        {
+          "terms_url": "https://scstrade.com/PrivacyPolicy.aspx",
+          "quote": "Users are advised to use the data for the purpose of information only"
+        }
+      ],
+      "notes": "A PSX broker site. Its privacy policy and footer disclaimer ('All Rights Reserved', a proprietary-rights warning) do not address automated access, reuse, or redistribution, and no terms-of-use page is linked. Data provenance is not stated. Needed: written terms or permission from Standard Capital Securities. Quotes were captured through a page-to-text tool on 2026-10-21 and must be confirmed against the live page."
+    },
+    {
+      "policy_id": "finhisaab",
+      "publisher": "FinHisaab",
+      "domains": [
+        "finhisaab.com"
+      ],
+      "automated_access": "unclear",
+      "reviewed_by": "Claude Code session on behalf of the repository owner; owner confirmation pending",
+      "reviewed_at": "2026-10-21T20:00:00+00:00",
+      "notes": "Terms of Service exist at https://finhisaab.com/legal/terms (a search-engine excerpt shows 'last updated November 9, 2025' and describes mutual fund screening, market data, and portfolio tracking), but the page returned HTTP 429 twice on 2026-10-21 and could not be read. Not reviewed beyond the excerpt; stays blocked until the full terms are read."
+    }
+  ]
+}

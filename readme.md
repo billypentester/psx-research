@@ -66,6 +66,23 @@ the company's full annual report. The source registry records this limitation.
 │   ├── DATA_SCHEMA.md                 JSON contracts and field definitions
 │   ├── INGESTION_PIPELINE.md          End-to-end operating procedure
 │   └── SOURCE_POLICY.md               Evidence, provenance, and conflict rules
+├── config/
+│   ├── accounting_rules.json          Accounting identities and subtotals
+│   ├── access_policies.json           Recorded terms reviews gating automated access
+│   └── sector_profiles.json           Sector profiles selected by verified classification
+├── data/v2/                           v2 candidates (not read by the legacy pipeline)
+├── finura/
+│   ├── schemas/                       Canonical models (company, source, fact) and v1 loaders
+│   ├── sources/                       Access policies, fetcher, source registry, adapters, transcription
+│   ├── migrations/v1_to_v2.py         Generic, manifested v1 → v2 migration
+│   ├── claims.py                      Listing claims and company proposals
+│   ├── onboarding.py                  CLI: ingest, review, propose
+│   ├── companies.py                   Company registry abstraction
+│   ├── sectors.py                     Sector-profile selection
+│   ├── storage.py                     Backup-guarded file replacement
+│   ├── accounting_rules.py            Accounting rule schema
+│   ├── validation.py                  Validation engine, report, and CLI
+│   └── workspace.py                   Company- and run-scoped paths
 ├── pipeline/
 │   ├── fetch_sources.py               Fetch permitted public source responses
 │   ├── normalize_external.py          Normalize mapped CSV/JSON/HTML responses
@@ -87,22 +104,40 @@ original source PDF.
 
 ## Setup
 
-Python 3.12 is recommended. Create or activate an environment if needed:
+The project is packaged as `finura` (`pyproject.toml`) and pinned to Python
+3.12 (`.python-version`). With [uv](https://docs.astral.sh/uv/):
 
 ```bash
-python3 -m venv .venv
+uv sync            # creates .venv with Python 3.12, pydantic, and pytest
+uv run pytest -q
+```
+
+Without uv, use any Python 3.12 environment:
+
+```bash
+python3.12 -m venv .venv
 source .venv/bin/activate
+python -m pip install -e . pytest
 ```
 
-The current test suite uses only the Python standard library and `pytest`.
-If `pytest` is not available in the environment, install it in the active
-virtual environment:
+The legacy `pipeline/` scripts run from the repository root. Most use only
+the standard library; `pipeline/fetch_sources.py` imports `finura`, so run it
+with `uv run`.
+
+Validate the v2 candidates with the Finura engine (see
+[docs/VALIDATION.md](docs/VALIDATION.md)). It writes a report to a path you
+choose, never into `data/v2/` or `runs/`:
 
 ```bash
-python -m pip install pytest
+uv run python -m finura.validation \
+  --facts data/v2/facts/FFC/financial_facts.json \
+  --sources data/v2/sources/source_registry.json \
+  --evidence-root . --companies data/v2/companies/company_registry.json \
+  --out /tmp/ffc-validation.json
 ```
 
-Run commands from the repository root.
+FFC currently gets `incomplete` (exit status 3): all 12 accounting checks pass,
+but its identity and sector are unverified.
 
 ## Validate the current dataset
 
@@ -198,24 +233,20 @@ URL is authoritative. Those remain deliberate human-controlled steps.
 The same registration contract applies to any ticker; replace `FFC` with the
 company identifier.
 
-Fetch permitted public source responses:
+Fetch public source responses from hosts whose access policy permits it:
 
 ```bash
-python pipeline/fetch_sources.py --company FFC \
-  --url "https://example.com/public/ffc-report.pdf"
+uv run python pipeline/fetch_sources.py --company FFC --url "<permitted URL>"
+uv run python pipeline/fetch_sources.py --company FFC --discover --delay 2
 ```
 
-Or run a shallow, ticker-matching discovery pass over the configured
-providers:
-
-```bash
-python pipeline/fetch_sources.py --company FFC --discover --delay 2
-```
-
-Configured providers are listed in
-[`data/source_catalog.json`](/home/bilal/projects/psx-research/data/source_catalog.json).
-The collector preserves raw responses and registers their hashes; it does not
-claim that a secondary source is authoritative or turn raw pages into facts.
+Every request, discovered link, and redirect is checked against
+`config/access_policies.json` before any network contact. PSX
+(`psx.com.pk` and all subdomains) is prohibited by PSX's terms of use, and
+the other catalog providers are prohibited or unclear under their own terms. Both commands therefore
+currently refuse every URL and exit non-zero. Download PSX documents manually
+and register them with `pipeline/register_source.py` (above), which works
+offline. See [docs/SOURCE_POLICY.md](docs/SOURCE_POLICY.md).
 
 The complete deterministic analysis run is:
 
@@ -239,12 +270,11 @@ python pipeline/run_company.py --company ENGRO --allow-empty --validate
 
 With data present, it initializes missing contracts, runs validation, derives metrics, and
 generates the report plus `reports/ENGRO/hermes_context.json`. Add
-`--fetch-discover` to perform the bounded public-source collection pass.
-
-To collect permitted public links before running the analysis:
+`--fetch-discover` to run the collector first. Under the current access
+policies it refuses every URL, so the analysis stops with a non-zero exit:
 
 ```bash
-python pipeline/run_analysis.py --company FFC --fetch-discover --validate
+uv run python pipeline/run_analysis.py --company FFC --fetch-discover --validate
 ```
 
 Use explicit URLs when a provider exposes a known public document:

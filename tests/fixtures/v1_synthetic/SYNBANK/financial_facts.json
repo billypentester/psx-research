@@ -1,0 +1,16 @@
+{
+  "company_id": "SYNBANK",
+  "currency": "PKR",
+  "facts": [
+    {"metric": "markup_return_interest_earned", "scope": "consolidated", "period_end": "2025-12-31", "period_type": "annual", "value": 820000000, "unit": "PKR_thousand", "source_id": "src_synbank2025annual", "source_page": "Profit and loss account, page 12", "verification_status": "verified", "fact_classification": "reported"},
+    {"metric": "markup_return_interest_expensed", "scope": "consolidated", "period_end": "2025-12-31", "period_type": "annual", "value": -530000000, "unit": "PKR_thousand", "source_id": "src_synbank2025annual", "source_page": "Profit and loss account, page 12", "verification_status": "verified", "fact_classification": "reported"},
+    {"metric": "net_markup_interest_income", "scope": "consolidated", "period_end": "2025-12-31", "period_type": "annual", "value": 290000000, "unit": "PKR_thousand", "source_id": "src_synbank2025annual", "source_page": "Profit and loss account, page 12", "verification_status": "verified", "fact_classification": "reported"},
+    {"metric": "net_markup_interest_income", "scope": "consolidated", "period_end": "2024-12-31", "period_type": "annual", "value": 301500000, "unit": "PKR_thousand", "source_id": "src_synbank2025annual", "source_page": "Profit and loss account, page 12", "verification_status": "needs_final_review", "fact_classification": "reported"},
+    {"metric": "advances_net", "scope": "consolidated", "period_end": "2025-12-31", "period_type": "annual", "value": 2150000000, "unit": "PKR_thousand", "source_id": "src_synbank2025annual", "source_page": "Statement of financial position, page 10", "verification_status": "ocr_unverified", "fact_classification": "reported"},
+    {"metric": "deposits_and_other_accounts", "scope": "consolidated", "period_end": "2025-12-31", "period_type": "annual", "value": 4700000000, "unit": "PKR_thousand", "source_id": "src_synbank2025annual", "source_page": "Statement of financial position, page 10", "verification_status": "ocr_unverified", "fact_classification": "reported"},
+    {"metric": "total_assets", "scope": "consolidated", "period_end": "2025-12-31", "period_type": "annual", "value": 6400000000, "unit": "PKR_thousand", "source_id": "src_synbank2025annual", "source_page": "Statement of financial position, page 10", "verification_status": "verified", "fact_classification": "reported"},
+    {"metric": "total_liabilities", "scope": "consolidated", "period_end": "2025-12-31", "period_type": "annual", "value": 5950000000, "unit": "PKR_thousand", "source_id": "src_synbank2025annual", "source_page": "Statement of financial position, page 10", "verification_status": "verified", "fact_classification": "reported"},
+    {"metric": "net_assets", "scope": "consolidated", "period_end": "2025-12-31", "period_type": "annual", "value": 450000000, "unit": "PKR_thousand", "source_id": "src_synbank2025annual", "source_page": "Statement of financial position, page 10", "verification_status": "verified", "fact_classification": "reported"},
+    {"metric": "earnings_per_share", "scope": "consolidated", "period_end": "2025-12-31", "period_type": "annual", "value": 31.07, "unit": "PKR_per_share", "source_id": "src_synbank2025annual", "source_page": "Profit and loss account, page 12", "verification_status": "verified", "fact_classification": "reported"}
+  ]
+}

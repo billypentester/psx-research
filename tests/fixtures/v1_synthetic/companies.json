@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "record_type": "company_registry",
+  "companies": [
+    {
+      "company_id": "SYNBANK",
+      "legal_name": "Synthetic Bank Limited (test fixture)",
+      "listing_status": "listed",
+      "symbols": [{"symbol": "SYNBANK", "valid_from": "2010-05-01"}],
+      "identity": {
+        "state": "verified",
+        "evidence": [{"description": "Synthetic listing page", "url": "https://example.com/synthetic/listings/SYNBANK"}],
+        "verified_by": "fixture",
+        "verified_at": "2026-10-01T10:00:00+00:00"
+      },
+      "classification": {
+        "sector_key": "commercial_banks",
+        "source_label": "COMMERCIAL BANKS",
+        "attestation": {
+          "state": "verified",
+          "evidence": [{"description": "Synthetic sector listing", "url": "https://example.com/synthetic/sectors"}],
+          "verified_by": "fixture",
+          "verified_at": "2026-10-01T10:00:00+00:00"
+        }
+      }
+    },
+    {
+      "company_id": "SYNIND",
+      "legal_name": "Synthetic Industries Limited (test fixture)",
+      "listing_status": "listed",
+      "symbols": [
+        {"symbol": "SYNI", "valid_to": "2024-07-01"},
+        {"symbol": "SYNIND", "valid_from": "2024-07-01"}
+      ],
+      "identity": {
+        "state": "verified",
+        "evidence": [{"description": "Synthetic symbol-change notice", "source_id": "src_synind2025q3"}],
+        "verified_by": "fixture",
+        "verified_at": "2026-10-01T10:00:00+00:00"
+      },
+      "classification": {
+        "sector_key": "cement",
+        "attestation": {"state": "unverified"}
+      }
+    },
+    {
+      "company_id": "SYNOLD",
+      "legal_name": "Synthetic Old Company Limited (test fixture)",
+      "listing_status": "delisted",
+      "delisted_on": "2023-06-30",
+      "symbols": [{"symbol": "SYNO", "valid_from": "2001-01-01", "valid_to": "2023-06-30"}],
+      "identity": {
+        "state": "verified",
+        "evidence": [{"description": "Synthetic delisting notice", "source_id": "src_synold2022final"}],
+        "verified_by": "fixture",
+        "verified_at": "2026-10-01T10:00:00+00:00"
+      }
+    },
+    {
+      "company_id": "SYNNEW",
+      "legal_name": "Synthetic New Company Limited (test fixture)",
+      "listing_status": "listed",
+      "symbols": [{"symbol": "SYNO", "valid_from": "2024-01-01"}],
+      "identity": {"state": "unverified"}
+    }
+  ]
+}

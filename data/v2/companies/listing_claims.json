@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "record_type": "listing_claims",
+  "claims": [
+    {
+      "schema_version": 1,
+      "claim_id": "clm_2d07ce7ef45ba4ea",
+      "assertion": {
+        "symbol": "FFC",
+        "as_of": "2026-01-29",
+        "legal_name": "Fauji Fertilizer Company Limited",
+        "listing_status": null,
+        "sector_label": null,
+        "valid_from": null,
+        "valid_to": null,
+        "previous_symbol": null
+      },
+      "evidence": [
+        {
+          "source_id": "src_e4abb64ff4886ffc",
+          "source_sha256": "a8962695859abc2e27bb780b0919a533f8e7dc6ae0652818d0735ce94cb41e2e",
+          "location": "cover letter dated January 29, 2026, reference line; committed OCR text data/normalized/FFC/ffc_report_ocr.txt line 4",
+          "excerpt": "Ref No. 6.12-PSX/S/FFC"
+        },
+        {
+          "source_id": "src_e4abb64ff4886ffc",
+          "source_sha256": "a8962695859abc2e27bb780b0919a533f8e7dc6ae0652818d0735ce94cb41e2e",
+          "location": "cover letter letterhead/footer; committed OCR text data/normalized/FFC/ffc_report_ocr.txt line 48",
+          "excerpt": "FAUJI FERTILIZER COMPANY LIMITED"
+        },
+        {
+          "source_id": "src_e4abb64ff4886ffc",
+          "source_sha256": "a8962695859abc2e27bb780b0919a533f8e7dc6ae0652818d0735ce94cb41e2e",
+          "location": "Annexure A page 6, consolidated profit attribution; committed OCR text data/normalized/FFC/ffc_report_ocr.txt line 621",
+          "excerpt": "Equity holders of Fauji Fertilizer Company Limited"
+        }
+      ],
+      "discovered_by": "Claude Code session 2026-10-21; transcribed from committed OCR text, not visually checked against the PDF",
+      "discovered_at": "2026-10-21T19:17:35.750945+00:00",
+      "status": "discovered",
+      "review": null
+    }
+  ]
+}
